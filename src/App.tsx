@@ -1,8 +1,11 @@
 function App() {
   return (
     <>
-      <div className="bg-gradient-to-r from-indigo-500 via-sky-500  to-emerald-500 h-full w-full">
-        <h1>Hello.</h1>
+      <div className="p-10 columns-1 justify-items-center grid gap-6">
+        <div className="flex justify-center text-[50px] border p-16">hi!</div>
+        <div className="flex justify-center text-[50px]  p-16">
+          i'm jonathon.
+        </div>
       </div>
     </>
   );
