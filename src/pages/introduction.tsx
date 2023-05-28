@@ -15,8 +15,7 @@ export default function Introduction() {
       }, 1500);
       return () => clearTimeout(timeoutId);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isProjectIntroAnimationComplete]);
+  });
 
   const handleEndOfNameAnimation = () => {
     setIsNameAnimationComplete(true);
