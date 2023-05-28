@@ -12,11 +12,11 @@ export default function Introduction() {
     if (isProjectIntroAnimationComplete) {
       const timeoutId = setTimeout(() => {
         navigate("/projects");
-      }, 1000);
-
+      }, 1500);
       return () => clearTimeout(timeoutId);
     }
-  }, [isProjectIntroAnimationComplete, navigate]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isProjectIntroAnimationComplete]);
 
   const handleEndOfNameAnimation = () => {
     setIsNameAnimationComplete(true);
