@@ -1,7 +1,61 @@
-import React from "react";
+import { useState } from "react";
+import "../tictactoe.scss";
 
-function tictactoe() {
-  return <div>tictactoe</div>;
+export default function Tictactoe() {
+  const [game, setGame] = useState({
+    board: [
+      [" ", " ", " "],
+      [" ", " ", " "],
+      [" ", " ", " "],
+    ],
+    id: null,
+    winner: null,
+  });
+  async function handleNewGame() {
+    const response = await fetch("https://tic-tac-toe-api.fly.dev/game", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+    });
+    if (response.ok) {
+      const newGame = await response.json();
+      setGame(newGame);
+    }
+  }
+  async function handleClickCell(row: number, column: number) {
+    const url = `https://tic-tac-toe-api.fly.dev/game/${game.id}`;
+    const body = { row: row, column: column };
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    if (response.ok) {
+      const newGame = await response.json();
+      setGame(newGame);
+    }
+  }
+  const header = game.winner
+    ? `${game.winner} is the winner!`
+    : "React Tac Toe";
+  return (
+    <div className="m-0 flex items-center justify-center">
+      <h1>
+        {header} <button onClick={handleNewGame}>New Game</button>
+      </h1>
+      <ul>
+        {game.board.map((boardRow, rowIndex) => {
+          return boardRow.map((cell, columnIndex) => {
+            return (
+              <li
+                key={columnIndex}
+                onClick={() => handleClickCell(rowIndex, columnIndex)}
+              >
+                {cell}
+              </li>
+            );
+          });
+        })}
+      </ul>
+    </div>
+  );
 }
-
-export default tictactoe;

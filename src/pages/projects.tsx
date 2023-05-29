@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 
-function projects() {
+export default function Projects() {
   return (
     <div className="grid p-10 grid-cols-3 gap-2  h-[20rem] text-center ">
       <div className="overflow-auto p-4">
@@ -122,5 +122,3 @@ function projects() {
     </div>
   );
 }
-
-export default projects;
