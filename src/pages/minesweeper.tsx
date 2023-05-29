@@ -125,43 +125,51 @@ export default function Minesweeper() {
   }
 
   function buttonStyling() {
-    return "border-2 border-black rounded-xl px-10 py-3 bg-green-400 bg-opacity-25 m-3 hover:cursor-pointer hover:shadow-lg hover:opacity-75";
+    return " px-10 py-3 bg-green-400 bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75";
   }
 
   function cellStyling() {
-    return "m-0 p-0 list-none border border-yellow-400 border-[1.5px] h-[38px] w-[38px] flex items-center justify-center ";
+    return "m-0 p-0 list-none border border-yellow-400  h-[38px] w-[38px] flex items-center justify-center ";
   }
 
   return (
-    <>
-      <div className="p-4 flex justify-center">
-        <div className="flex game-container">
-          <h1>Minesweeper</h1>
+    <div className="shadow-lg shadow-indigo-500 rounded-xl p-8">
+      <div className="flex justify-center">
+        <div className="shadow-xl rounded-xl px-2 py-4  w-fit h-fit flex items-center justify-center flex-col font-stone-700 ">
+          <h1 className="text-[3rem]">
+            {game.state == undefined ? "Minesweeper" : ""}
+          </h1>
           <h2 className="text-center pb-[1rem]">{dynamicH2()}</h2>
           <div className="flex items-center justify-center mx-4">
             <button
               onClick={() => handleNewGame(0)}
-              className={`${buttonStyling}`}
+              className={`${buttonStyling} rounded-lg`}
             >
               Easy (8x8)
             </button>
             <button
               onClick={() => handleNewGame(1)}
-              className={`${buttonStyling}`}
+              className={`${buttonStyling} rounded-lg`}
             >
               Intermediate (16x16)
             </button>
             <button
               onClick={() => handleNewGame(2)}
-              className={`${buttonStyling}`}
+              className={`${buttonStyling} rounded-lg`}
             >
               Expert (24x24)
             </button>
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <ul className={`difficultyStyle difficulty-${game.board.length}`}>
+      <div
+        className={` ${
+          game.state == undefined ? "pt-0" : "pt-4"
+        } flex justify-center `}
+      >
+        <ul
+          className={`difficultyStyle  border-yellow-400 rounded border difficulty-${game.board.length}`}
+        >
           {game.board.map((row, rowIndex) =>
             row.map((cell, columnIndex) => (
               <li
@@ -185,6 +193,6 @@ export default function Minesweeper() {
           )}
         </ul>
       </div>
-    </>
+    </div>
   );
 }

@@ -43,7 +43,7 @@ export default function Introduction() {
       >
         <div
           onAnimationEnd={handleEndOfHiAnimation}
-          className="animate-slideInFromRight flex items-center justify-center text-[50px] shadow-lg text-slate-900 p-8 w-[150px] h-[150px]"
+          className="animate-slideInFromRight flex items-center justify-center text-[50px] shadow-lg p-8 w-[150px] h-[150px]"
         >
           hi!
         </div>
@@ -51,7 +51,7 @@ export default function Introduction() {
           onAnimationEnd={handleEndOfNameAnimation}
           className={` ${
             isHiAnimationComplete ? "animate-slideInFromLeft" : "hidden"
-          } justify-center text-[50px] text-slate-900 p-4`}
+          } justify-center text-[50px] p-4`}
         >
           i&apos;m jonathon
         </div>
@@ -61,7 +61,7 @@ export default function Introduction() {
             isNameAnimationComplete
               ? "transition-opacity opacity-100 duration-[3000ms]"
               : "opacity-0"
-          } justify-center text-[50px] text-slate-900 p-4 `}
+          } justify-center text-[50px] p-4 `}
         >
           & here are some of my projects&hellip;
         </div>
