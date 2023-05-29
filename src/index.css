@@ -1,5 +1,29 @@
 @tailwind base;
+
 @tailwind components;
+
+.difficultyStyle {
+  border: 5px solid #242424;
+  display: grid;
+  gap: 0.1;
+  height: fit-content;
+  width: fit-content;
+  background: transparent;
+  padding-left: 0;
+  &.difficulty-0 {
+    display: none;
+  }
+  &.difficulty-8 {
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+  }
+  &.difficulty-16 {
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+  }
+  &.difficulty-24 {
+    grid-template: repeat(24, 1fr) / repeat(24, 1fr);
+  }
+}
+
 @tailwind utilities;
 
 @keyframes slideInFromRight {

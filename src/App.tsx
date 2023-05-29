@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Introduction from "./pages/introduction";
 import Projects from "./pages/projects";
+import Minesweeper from "./pages/minesweeper";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Introduction />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Minesweeper />} />
         </Routes>
       </Router>
     </div>
