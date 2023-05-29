@@ -12,7 +12,7 @@ export default function Introduction() {
     if (isProjectIntroAnimationComplete) {
       const timeoutId = setTimeout(() => {
         navigate("/projects");
-      }, 1500);
+      }, 500);
       return () => clearTimeout(timeoutId);
     }
   });

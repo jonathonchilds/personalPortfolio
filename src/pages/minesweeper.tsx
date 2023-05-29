@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../minesweeperStyling.scss";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
@@ -100,7 +99,7 @@ export default function Minesweeper() {
     ) : value == "_" ? (
       " "
     ) : value == "@" ? (
-      <i className="text-fit">Nice</i>
+      <i className="text-fit">{":-)"}</i>
     ) : (
       value
     );
@@ -112,16 +111,21 @@ export default function Minesweeper() {
     } else if (game.state == "lost") {
       return "Oof! Choose a difficulty to play again.";
     } else if (game.state == undefined) {
-      return "Choose a difficulty!";
+      return (
+        <>
+          Choose a difficulty to start playing. <br /> (Right-click to flag a
+          cell.)
+        </>
+      );
       // eslint-disable-next-line no-constant-condition
     } else if (game.state == "playing" || "new") {
-      return `Good luck!
+      return `Good luck! 
        (Choose a difficulty to reset the game.)`;
     }
   }
 
   function buttonStyling() {
-    return "border-2 border-black rounded-9 px-10 py-3 bg-green-400 bg-opacity-25 m-3 hover:cursor-pointer hover:shadow-lg hover:opacity-75";
+    return "border-2 border-black rounded-xl px-10 py-3 bg-green-400 bg-opacity-25 m-3 hover:cursor-pointer hover:shadow-lg hover:opacity-75";
   }
 
   function cellStyling() {
@@ -130,10 +134,10 @@ export default function Minesweeper() {
 
   return (
     <>
-      <div className="App">
+      <div className="p-4 flex justify-center">
         <div className="flex game-container">
           <h1>Minesweeper</h1>
-          <h2>{dynamicH2()}</h2>
+          <h2 className="text-center pb-[1rem]">{dynamicH2()}</h2>
           <div className="flex items-center justify-center mx-4">
             <button
               onClick={() => handleNewGame(0)}
@@ -156,7 +160,7 @@ export default function Minesweeper() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="flex justify-center">
         <ul className={`difficultyStyle difficulty-${game.board.length}`}>
           {game.board.map((row, rowIndex) =>
             row.map((cell, columnIndex) => (
