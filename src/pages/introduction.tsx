@@ -63,7 +63,7 @@ export default function Introduction() {
               : "opacity-0"
           } justify-center text-[50px] p-4 `}
         >
-          & here are some of my projects&hellip;
+          & here are some of my projects!
         </div>
       </div>
     </div>
