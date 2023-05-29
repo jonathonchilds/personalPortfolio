@@ -1,3 +1,12 @@
+//TODO: Add number of bombs
+// add chat bot for help
+// add link back to home page
+// add link to github
+// add link to linkedin
+// add link to resume
+// add link to email
+// add link to phone number
+
 import React, { useState } from "react";
 
 export default function Minesweeper() {
@@ -111,16 +120,10 @@ export default function Minesweeper() {
     } else if (game.state == "lost") {
       return "Oof! Choose a difficulty to play again.";
     } else if (game.state == undefined) {
-      return (
-        <>
-          Choose a difficulty to start playing. <br /> (Right-click to flag a
-          cell.)
-        </>
-      );
+      return "";
       // eslint-disable-next-line no-constant-condition
     } else if (game.state == "playing" || "new") {
-      return `Good luck! 
-       (Choose a difficulty to reset the game.)`;
+      return "Good luck!";
     }
   }
 
@@ -139,25 +142,25 @@ export default function Minesweeper() {
           <h1 className="text-[3rem]">
             {game.state == undefined ? "Minesweeper" : ""}
           </h1>
-          <h2 className="text-center pb-[1rem]">{dynamicH2()}</h2>
+          <h2 className="text-center pb-[1rem] text-[2rem]">{dynamicH2()}</h2>
           <div className="flex items-center justify-center mx-4">
             <button
               onClick={() => handleNewGame(0)}
               className={`${buttonStyling} rounded-lg`}
             >
-              Easy (8x8)
+              Easy
             </button>
             <button
               onClick={() => handleNewGame(1)}
               className={`${buttonStyling} rounded-lg`}
             >
-              Intermediate (16x16)
+              Intermediate
             </button>
             <button
               onClick={() => handleNewGame(2)}
               className={`${buttonStyling} rounded-lg`}
             >
-              Expert (24x24)
+              Expert
             </button>
           </div>
         </div>
