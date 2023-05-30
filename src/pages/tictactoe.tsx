@@ -38,24 +38,35 @@ export default function Tictactoe() {
     ? `${game.winner} is the winner!`
     : "React Tac Toe";
   return (
-    <div className="m-0 flex items-center justify-center">
-      <h1>
-        {header} <button onClick={handleNewGame}>New Game</button>
-      </h1>
-      <ul>
-        {game.board.map((boardRow, rowIndex) => {
-          return boardRow.map((cell, columnIndex) => {
-            return (
-              <li
-                key={columnIndex}
-                onClick={() => handleClickCell(rowIndex, columnIndex)}
-              >
-                {cell}
-              </li>
-            );
-          });
-        })}
-      </ul>
+    <div>
+      <div>
+        <h1 className="">
+          {header}{" "}
+          <button
+            onClick={handleNewGame}
+            className="rounded-lg border border-transparent px-3 py-2"
+          >
+            New Game
+          </button>
+        </h1>
+      </div>
+      <div>
+        <ul className="grid grid-cols-3 grid-rows-3 gap-1 h-[400px]">
+          {game.board.map((boardRow, rowIndex) => {
+            return boardRow.map((cell, columnIndex) => {
+              return (
+                <li
+                  key={columnIndex}
+                  onClick={() => handleClickCell(rowIndex, columnIndex)}
+                  className=" border-2 border-black text-4xl flex items-center justify-center"
+                >
+                  {cell}
+                </li>
+              );
+            });
+          })}
+        </ul>
+      </div>
     </div>
   );
 }

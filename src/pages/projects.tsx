@@ -67,9 +67,8 @@ export default function Projects() {
       </div>
       <div className="overflow-auto p-4">
         <button className="shadow p-4 mb-6">
-          <Link to="/minesweeper" className="text-[40px]">
-            {" "}
-            Minesweeper{" "}
+          <Link to="/tictactoe" className="text-[40px]">
+            Tic-Tac-Toe
           </Link>
         </button>
         <p>
