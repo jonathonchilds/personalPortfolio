@@ -1,5 +1,6 @@
+//add useEffect hook to create new game on page load instead of having to use "new game" button
+
 import { useState } from "react";
-import "../tictactoe.scss";
 
 export default function Tictactoe() {
   const [game, setGame] = useState({
@@ -36,22 +37,23 @@ export default function Tictactoe() {
   }
   const header = game.winner
     ? `${game.winner} is the winner!`
-    : "React Tac Toe";
+    : "React-Tac-Toe";
+
   return (
     <div>
-      <div>
-        <h1 className="">
-          {header}{" "}
+      <div className="flex flex-col">
+        <h1 className="text-center mt-4 text-3xl">{header} </h1>
+        <div className="flex justify-center">
           <button
             onClick={handleNewGame}
-            className="rounded-lg border border-transparent px-3 py-2"
+            className="rounded-lg shadow-lg w-[150px] py-2 m-4"
           >
             New Game
           </button>
-        </h1>
+        </div>
       </div>
       <div>
-        <ul className="grid grid-cols-3 grid-rows-3 gap-1 h-[400px]">
+        <ul className="grid grid-cols-3 grid-rows-3 gap-1 h-[400px] w-[400px]">
           {game.board.map((boardRow, rowIndex) => {
             return boardRow.map((cell, columnIndex) => {
               return (

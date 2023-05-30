@@ -22,48 +22,6 @@
   }
 }
 
-/* .liStyle {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.overallboard {
-  height: calc(100vh - 3 * var(--header-font-size));
-  display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-
-  gap: 1rem;
-
-  background-color: var(--square-text-color);
-} */
-
-/* .ul li {
-  font-family: monospace;
-  font-size: var(--square-font-size);
-
-  background-color: var(--square-background-color);
-
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 2s font-size ease-in-out;
-}
-
-ul li.taken {
-  cursor: not-allowed;
-}
-
-.ul li.small {
-  font-size: 4rem;
-}
-
-ul li.not-allowed-click {
-  background-color: red;
-} */
-
 @tailwind utilities;
 
 @keyframes slideInFromRight {
