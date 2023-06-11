@@ -3,14 +3,15 @@ import Introduction from "./pages/introduction";
 import Projects from "./pages/projects";
 import Minesweeper from "./pages/minesweeper";
 import Tictactoe from "./pages/tictactoe";
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Introduction />} />
-
           <Route path="/projects" element={<Projects />} />
           <Route path="/tictactoe" element={<Tictactoe />} />
           <Route path="*" element={<Minesweeper />} />
