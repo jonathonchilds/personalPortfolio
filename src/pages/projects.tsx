@@ -7,7 +7,7 @@ export default function Projects() {
     "shadow-xl p-4 w-full rounded-full bg-gray-200 transparent hover:bg-gray-300 hover:shadow-2xl transition-all duration-500";
 
   return (
-    <div className="grid p-10 grid-cols-3 gap-2 h-[20rem] text-center  ">
+    <section className="w-100% h-full">
       <div>
         <button className={`${projectButtons}`}>
           <Link to="/minesweeper" className="text-[40px]">
@@ -35,6 +35,6 @@ export default function Projects() {
           </a>
         </button>
       </div>
-    </div>
+    </section>
   );
 }

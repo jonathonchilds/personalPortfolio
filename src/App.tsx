@@ -7,14 +7,14 @@ import Navbar from "./components/navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Introduction />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/tictactoe" element={<Tictactoe />} />
-          <Route path="*" element={<Minesweeper />} />
+          <Route path="/minesweeper" element={<Minesweeper />} />
         </Routes>
       </Router>
     </div>

@@ -32,7 +32,7 @@ export default function Introduction() {
   // after the introduction animation is complete, the user is redirected to the projects page
 
   return (
-    <div>
+    <div className="h-full w-full m-0 p-0 relative ">
       <div
         id="container"
         className={
@@ -43,15 +43,15 @@ export default function Introduction() {
       >
         <div
           onAnimationEnd={handleEndOfHiAnimation}
-          className="animate-slideInFromRight flex items-center justify-center text-[50px] shadow-lg p-8 w-[150px] h-[150px]"
+          className="animate-slideInFromRight text-center text-[50px] p-8 w-[150px] h-[150px]"
         >
-          Hey!
+          Hi!
         </div>
         <div
           onAnimationEnd={handleEndOfNameAnimation}
           className={` ${
             isHiAnimationComplete ? "animate-slideInFromLeft" : "hidden"
-          } justify-center text-[50px] p-4`}
+          } text-center text-[50px] p-4`}
         >
           I&apos;m Jonathon.
         </div>
@@ -61,9 +61,9 @@ export default function Introduction() {
             isNameAnimationComplete
               ? "transition-opacity opacity-100 duration-[3000ms]"
               : "opacity-0"
-          } justify-center text-[50px] p-4 `}
+          } text-center text-[50px] p-4 `}
         >
-          Welcome to my projects!
+          Welcome to my portfolio!
         </div>
       </div>
     </div>
