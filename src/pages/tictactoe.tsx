@@ -1,4 +1,5 @@
 //add useEffect hook to create new game on page load instead of having to use "new game" button
+//update tic-tac-toe API documentation to reflect my changes!
 
 import { useState } from "react";
 
@@ -60,7 +61,7 @@ export default function Tictactoe() {
                 <li
                   key={columnIndex}
                   onClick={() => handleClickCell(rowIndex, columnIndex)}
-                  className=" border-2 border-black text-4xl flex items-center justify-center"
+                  className=" border-2 border-black rounded-xl text-4xl flex items-center justify-center"
                 >
                   {cell}
                 </li>

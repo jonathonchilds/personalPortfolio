@@ -10,6 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Introduction />} />
+
           <Route path="/projects" element={<Projects />} />
           <Route path="/tictactoe" element={<Tictactoe />} />
           <Route path="*" element={<Minesweeper />} />
