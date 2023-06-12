@@ -9,19 +9,10 @@ export default function Projects() {
   return (
     <section className="w-100% h-full">
       <div>
-        <button className={`${projectButtons}`}>
-          <Link to="/minesweeper" className="text-[40px]">
-            {" "}
-            Minesweeper{" "}
-          </Link>
-        </button>
+        <button className={`${projectButtons}`}>Minesweeper </button>
       </div>
       <div>
-        <button className={`${projectButtons}`}>
-          <Link to="/tictactoe" className="text-[40px]">
-            Tic-Tac-Toe
-          </Link>
-        </button>
+        <button className={`${projectButtons}`}>Tic-Tac-Toe</button>
       </div>
       <div>
         <button className={`${projectButtons}`}>

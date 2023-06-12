@@ -1,21 +1,10 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-export default function Introduction() {
+const Introduction = () => {
   const [isHiAnimationComplete, setIsHiAnimationComplete] = useState(false);
   const [isNameAnimationComplete, setIsNameAnimationComplete] = useState(false);
   const [isProjectIntroAnimationComplete, setIsProjectIntroAnimationComplete] =
     useState(false);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (isProjectIntroAnimationComplete) {
-      const timeoutId = setTimeout(() => {
-        navigate("/projects");
-      }, 500);
-      return () => clearTimeout(timeoutId);
-    }
-  });
 
   const handleEndOfNameAnimation = () => {
     setIsNameAnimationComplete(true);
@@ -68,4 +57,6 @@ export default function Introduction() {
       </div>
     </div>
   );
-}
+};
+
+export default Introduction;

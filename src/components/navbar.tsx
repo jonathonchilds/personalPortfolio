@@ -1,19 +1,26 @@
-//TODO:
-//Change avatar to my picture
-//Change tailwind logo to something else
-// Change navigation categories
-// Change navigation links
-// make it so that the navbar is always on top
+// //TODO:
+// //Change avatar to my picture
+// // Change navigation links
+// // add link back to home page
+// // add link to github
+// // add link to linkedin
+// // add link to resume
+// // add link to email
+// // add link to phone number
+// //
+// icons by
+// <a target="_blank" href="https://icons8.com">Icons8</a>
 
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+// import { Link } from "react-scroll";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
+  { name: "Home", href: "#", current: true },
+  { name: "LinkedIn", href: "#", current: false },
   { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Contact", href: "#", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -22,14 +29,16 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="fixed top-0 left-0 w-full z-999">
+    <div className="fixed top-0 left-0 w-screen z-999 position-absolute">
       <Disclosure as="nav" className="bg-gray-800">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-10">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  //
                   {/* Mobile menu button*/}
+                  //
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -40,18 +49,6 @@ export default function Example() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div className="flex flex-shrink-0 items-center">
-                    <img
-                      className="block h-8 w-auto lg:hidden"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                      alt="Your Company"
-                    />
-                    <img
-                      className="hidden h-8 w-auto lg:block"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                      alt="Your Company"
-                    />
-                  </div>
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
@@ -104,7 +101,7 @@ export default function Example() {
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
-                              Your Profile
+                              LinkedIn
                             </a>
                           )}
                         </Menu.Item>
@@ -117,7 +114,7 @@ export default function Example() {
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
-                              Settings
+                              Play Minesweeper
                             </a>
                           )}
                         </Menu.Item>
@@ -130,7 +127,7 @@ export default function Example() {
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
-                              Sign out
+                              Play Tic-Tac-Toe
                             </a>
                           )}
                         </Menu.Item>
