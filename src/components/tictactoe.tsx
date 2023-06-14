@@ -36,20 +36,28 @@ export default function Tictactoe() {
       setGame(newGame);
     }
   }
-  const header = game.winner
-    ? `${game.winner} is the winner!`
-    : "React-Tac-Toe";
+
+  const dynamicHeader = () => {
+    if (game.winner == "X") {
+      return `The computer wins!`;
+    } else if (game.winner == "TIE") {
+      return `It's a tie! (You can't win!)`;
+    } else return "";
+  };
 
   return (
-    <section className="my-48 flex  sm:flex-row flex-col justify-around">
-      <div className="text-center sm:w-1/3 sm:py-6 ">
-        <div className="flex mb-6">
+    <section
+      className="my-48 flex  sm:flex-row flex-col justify-around"
+      id="tictactoe"
+    >
+      <div className="text-center sm:w-1/3 sm:py-6 flex flex-col  justify-center items-center content-evenly ">
+        <div className="flex mb-8">
           <h1 className="font-extrabold text-6xl ">React-Tac-Toe</h1>
           <h2 className="font-bold text-3xl font-kaushan ml-10 -rotate-12">
             Unbeatable!
           </h2>
         </div>
-        <div className="flex justify-evenly">
+        <div className="flex w-full justify-evenly mb-8">
           <img src="src/assets/icons/reactlogo.png" alt="react logo" />
           <img src="src/assets/icons/tailwindlogo.png" alt="tailwind logo" />
           <img src="src/assets/icons/html5logo.png" alt="html5 logo" />
@@ -59,37 +67,60 @@ export default function Tictactoe() {
             alt="javascript logo"
           />
         </div>
-        <p className="p-14">
-          Now here's a fun one! With changes to heroku in the midst of our
-          cohort, the API we used to load the unbeatable game logic was taken
-          down! Not to worry, friends! I forked the repo and enjoyed my first
-          exposure to the Ruby language. I also underwent the seemingly
-          monumental task of solving outdated dependency and version issues.
-          Finally, I got the thing deployed! This was the first application (&
-          API) I'd ever deployed!
+        <p className="font-bold text-xl m-4">
+          Tldr; I deployed this API for my classmates and I since the original
+          was broken.
+        </p>
+        <p className="pb-1">Here's a proud project!</p>
+        <p>
+          We were instructed to look at the structure of this API and based on
+          the data it returned, code an app to play a game of (unbeatable)
+          tic-tac-toe.
+        </p>
+        <p className="font-semibold p-2">
+          Problem was, the API was taken down during Heroku's big changes last
+          year!
+        </p>
+        <p className="pb-2">Challenge accepted!</p>
+        <p className="pb-1">
+          I forked the repo, installed the dependencies, and deployed the app
+          myself via fly.io! (Where the API is served to this day!)
+        </p>
+        <p className="pb-1">
+          It's a great example of my desire to problem solve.
+        </p>
+        <p className="pb-1">
+          Although before this project I'd never actually deployed an app nor
+          been exposed to the Ruby language/framework, I dove in and got it
+          running.
+        </p>
+        <p className="p-2 font-semibold">
+          It was an empowering learning experience!
         </p>
       </div>
-      <div className="mb-24 shadow-lg shadow-indigo-500 rounded-xl border p-8">
+      <div className="shadow-lg shadow-indigo-500 rounded-xl border p-9">
+        <h1 className="text-3xl font-bold text-center mb-4">
+          {dynamicHeader()}
+        </h1>
         <div className="flex flex-col">
-          <h1 className="text-center mt-4 py-4 text-3xl">{header} </h1>
           <div className="flex justify-center">
             <button
               onClick={handleNewGame}
               className="text-sm px-4 sm:px-10 sm:py-3 py-1 mb-8 shadow-lg rounded-lg bg-green-400 bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75"
             >
-              New Game
+              {game.id == null ? "Start Game" : "Reset Game"}
             </button>
           </div>
         </div>
         <div className="flex justify-center">
-          <ul className="grid grid-cols-3 grid-rows-3 gap-1 h-[400px] w-[400px]">
+          <ul className="grid grid-cols-3 grid-rows-3 gap-3 h-[500px] w-[500px]">
             {game.board.map((boardRow, rowIndex) => {
               return boardRow.map((cell, columnIndex) => {
                 return (
                   <li
                     key={columnIndex}
                     onClick={() => handleClickCell(rowIndex, columnIndex)}
-                    className=" border-2 border-black rounded-xl text-4xl flex items-center justify-center"
+                    className=" border-2 border-black rounded-xl text-6xl flex items-center justify-center"
                   >
                     {cell}
                   </li>

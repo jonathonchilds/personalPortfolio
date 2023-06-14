@@ -2,7 +2,7 @@
 // add chat bot for help?
 //add use effect or cache to pre-load API connection?
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
@@ -37,6 +37,10 @@ export default function Minesweeper() {
     winner: string | undefined;
   };
 
+  useEffect(() => {
+    handleNewGame(0);
+  }, []);
+
   async function handleNewGame(difficulty: number) {
     const response = await fetch(
       "https://minesweeper-api.herokuapp.com/games",
@@ -51,6 +55,7 @@ export default function Minesweeper() {
       setGame(newGame);
     }
   }
+  console.log(game);
 
   async function handleClickCell(
     row: number,
@@ -131,8 +136,11 @@ export default function Minesweeper() {
   }
 
   return (
-    <section className="my-48 flex  sm:flex-row flex-col justify-around">
-      <div className="shadow-lg shadow-indigo-500 rounded-xl p-8 border">
+    <section
+      className=" flex  sm:flex-row flex-col justify-around mb-[20rem]"
+      id="minesweeper"
+    >
+      <div className="shadow-xl shadow-indigo-500 rounded-xl p-8 border">
         <div className="flex justify-center">
           <div className=" px-2 py-4  w-fit h-fit flex items-center justify-center flex-col font-stone-700 ">
             <h1 className="text-[3rem]">
@@ -197,29 +205,57 @@ export default function Minesweeper() {
           </ul>
         </div>
       </div>
-      <div className="text-center sm:w-1/3 sm:py-6 ">
-        <div className="flex mb-6">
+      <div className="text-center flex flex-col justify-center items-center sm:w-1/3 sm:py-6 ">
+        <div className="flex mb-8">
           <h1 className="font-extrabold text-6xl ">Minesweeper</h1>
           <h2 className="font-bold text-3xl font-kaushan ml-10 -rotate-12">
             A classic!
           </h2>
         </div>
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly w-full mb-8">
           <img src="src/assets/icons/reactlogo.png" alt="react logo" />
-          <img src="src/assets/icons/tailwindlogo.png" alt="tailwind logo" />
-          <img src="src/assets/icons/html5logo.png" alt="html5 logo" />
-
           <img
             src="src/assets/icons/typescriptlogo.png"
             alt="javascript logo"
           />
+
+          <img src="src/assets/icons/tailwindlogo.png" alt="tailwind logo" />
+          <img src="src/assets/icons/html5logo.png" alt="html5 logo" />
         </div>
-        <p className="p-14">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
-          assumenda dolor ut necessitatibus quae odit nulla aperiam ducimus odio
-          quibusdam esse labore ratione dolorum ipsa culpa eveniet, ab veritatis
-          autem!
+        <p className="pb-2">What a wonderful classic!</p>
+        <p className="pb-2">
+          At hand we have a strongly-typed React app that incorporates an
+          external API.
         </p>
+        <p className="pb-2 font-semibold">
+          For this assignment, we were given the API web address and told to
+          analyze the data returned by calls, and then code a game of
+          Minesweeper!
+        </p>
+        <p className="pb-2">
+          This gave rise to asynchornous updates to the game state and dynamic
+          rendering of the game board based on difficulty.
+        </p>
+        <p>
+          I also added plenty of styling flair, including the implementation of
+          icons from font-awesome :) *Note: For the original non-portfolio
+          version I used SCSS for styling!
+        </p>
+        <div className="w-full flex justify-evenly mt-6 ">
+          <button className="border p-4 px-6 rounded-full bg-cyan-500  ">
+            <a
+              href="https://github.com/jonathonchilds/Minesweeper/blob/trunk/src/App.tsx"
+              target="_blank"
+            >
+              View the source!
+            </a>
+          </button>
+          <button className="border p-4 px-6 rounded-full  bg-cyan-500 relative ">
+            <a href="https://minesweeper-api.herokuapp.com/" target="_blank">
+              Check out the API
+            </a>
+          </button>
+        </div>
       </div>
     </section>
   );

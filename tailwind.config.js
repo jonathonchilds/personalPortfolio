@@ -10,6 +10,7 @@ export default {
       sans: ["Montserrat", "sans-serif"],
       kaushan: ["Kaushan Script", "cursive"],
       moirai: ["Moirai One", "cursive"],
+      diphy: ["Diphylleia", "serif"],
     },
     extend: {},
   },

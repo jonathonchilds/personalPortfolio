@@ -10,157 +10,54 @@
 // //
 // icons by
 // <a target="_blank" href="https://icons8.com">Icons8</a>
+// implement codewars API with my data, a link to my favorite codewar, etc.
 
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-// import { Link } from "react-scroll";
-
-const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "LinkedIn", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
-];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function Example() {
+const navbar = () => {
   return (
-    <div className="fixed top-0 left-0 w-screen z-999 position-absolute">
-      <Disclosure as="nav" className="bg-gray-800">
-        {({ open }) => (
-          <>
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-10">
-              <div className="relative flex h-16 items-center justify-between">
-                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  //
-                  {/* Mobile menu button*/}
-                  //
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div className="hidden sm:ml-6 sm:block">
-                    <div className="flex space-x-4">
-                      {navigation.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current
-                              ? "bg-gray-900 text-white"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                            "rounded-md px-3 py-2 text-sm font-medium"
-                          )}
-                          aria-current={item.current ? "page" : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  {/* Profile dropdown */}
-                  <Menu as="div" className="relative ml-3">
-                    <div>
-                      <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                        <span className="sr-only">Open user menu</span>
-                        <img
-                          className="h-8 w-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                          alt=""
-                        />
-                      </Menu.Button>
-                    </div>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              LinkedIn
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              Play Minesweeper
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              Play Tic-Tac-Toe
-                            </a>
-                          )}
-                        </Menu.Item>
-                      </Menu.Items>
-                    </Transition>
-                  </Menu>
-                </div>
-              </div>
-            </div>
+    <nav className="flex justify-evenly mt-10 mb-24 ">
+      <div className=" shadow-2xl rounded-xl bg-slate-50  flex w-[175px] justify-center items-center">
+        <a href="https://www.linkedin.com/in/jonathonchilds/" target="_blank">
+          <img
+            src="/src/assets/logos/LinkedIn-Logos/LI-Logo.png"
+            alt="LinkedIn Logo"
+            width={125}
+          />{" "}
+        </a>
+      </div>
+      <div className=" shadow-2xl rounded-xl bg-slate-400 w-[175px]  flex justify-center items-center">
+        <a href="https://www.github.com/jonathonchilds/" target="_blank">
+          <img
+            src="/src/assets/logos/GitHub-Logos/GitHub_Logo.png"
+            alt="GitHub Logo"
+            width={100}
+          />{" "}
+        </a>
+      </div>
+      <div className=" shadow-2xl rounded-xl bg-slate-50 w-[175px]  flex justify-center items-center">
+        <a
+          href="https://docs.google.com/document/d/1K2EI_wYVG9oVDB105Pzyzr9EU__4w6Ga/edit?usp=sharing&ouid=115700595236121989336&rtpof=true&sd=true"
+          target="_blank"
+        >
+          <span className="text-3xl text-slate-900 font-kaushan">Resume</span>
+        </a>
+      </div>
+      <div className=" shadow-2xl rounded-xl bg-[#FAE169] w-[190px] py-2 pb-3 flex justify-center items-center">
+        <a href="https://toolboxapp.herokuapp.com" target="_blank">
+          <img
+            src="/src/assets/logos/toolbox.png"
+            alt="Capstone App Logo"
+            width={150}
+          />{" "}
+        </a>
+      </div>
 
-            <Disclosure.Panel className="sm:hidden">
-              <div className="space-y-1 px-2 pb-3 pt-2">
-                {navigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "block rounded-md px-3 py-2 text-base font-medium"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                ))}
-              </div>
-            </Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
-    </div>
+      <div className=" shadow-lg rounded-xl bg-slate-50 w-[175px] flex justify-center items-center">
+        <a href="app.artstudio.net" target="_blank">
+          <span className="text-3xl text-slate-900 font-diphy">Art Studio</span>
+        </a>
+      </div>
+    </nav>
   );
-}
+};
+
+export default navbar;
