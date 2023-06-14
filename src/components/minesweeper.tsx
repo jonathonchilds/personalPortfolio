@@ -221,12 +221,12 @@ export default function Minesweeper() {
         </div>
         <p className="pb-2">What a wonderful classic!</p>
         <p className="pb-2">
-          At hand we have a strongly-typed React app that incorporates an
-          external API.
+          Here we have a strongly-typed React app that incorporates an external
+          API.
         </p>
         <p className="pb-2 font-semibold">
           For this assignment, we were given the API web address and told to
-          analyze the data returned by calls, and then code a game of
+          analyze the data returned by calls and then code a game of
           Minesweeper!
         </p>
         <p className="pb-2">

@@ -47,7 +47,7 @@ export default function Tictactoe() {
 
   return (
     <section
-      className="my-48 flex  sm:flex-row flex-col justify-around"
+      className="my-48 flex  sm:flex-row flex-col justify-around "
       id="tictactoe"
     >
       <div className="text-center sm:w-1/3 sm:py-6 flex flex-col  justify-center items-center content-evenly ">
@@ -65,8 +65,8 @@ export default function Tictactoe() {
           <img src="./assets/icons/typescriptlogo.png" alt="javascript logo" />
         </div>
         <p className="font-bold text-xl m-4">
-          Tldr; I deployed this API for my classmates and I since the original
-          was broken.
+          Tl;dr I deployed this API for my classmates and I. React-Tac-Toe lives
+          on!
         </p>
         <p className="pb-1">Here's a proud project!</p>
         <p>
@@ -91,40 +91,56 @@ export default function Tictactoe() {
           been exposed to the Ruby language/framework, I dove in and got it
           running.
         </p>
-        <p className="p-2 font-semibold">
+        <p className="p-2 font-semibold flex justify-center items-center">
           It was an empowering learning experience!
+          <img src="/public/sweatEmoji.png" width={25} className="ml-2"></img>
         </p>
-      </div>
-      <div className="shadow-lg shadow-indigo-500 rounded-xl border p-9">
-        <h1 className="text-3xl font-bold text-center mb-4">
-          {dynamicHeader()}
-        </h1>
-        <div className="flex flex-col">
-          <div className="flex justify-center">
-            <button
-              onClick={handleNewGame}
-              className="text-sm px-4 sm:px-10 sm:py-3 py-1 mb-8 shadow-lg rounded-lg bg-green-400 bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75"
+        <div className="w-full flex justify-evenly mt-6 ">
+          <button className="border p-4 px-6 rounded-full bg-cyan-500  ">
+            <a
+              href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx"
+              target="_blank"
             >
-              {game.id == null ? "Start Game" : "Reset Game"}
-            </button>
-          </div>
+              View the source!
+            </a>
+          </button>
+          <button className="border p-4 px-6 rounded-full  bg-cyan-500 relative ">
+            <a href="https://tic-tac-toe-api.fly.dev/" target="_blank">
+              Check out the API
+            </a>
+          </button>
         </div>
-        <div className="flex justify-center">
-          <ul className="grid grid-cols-3 grid-rows-3 gap-3 h-[500px] w-[500px]">
-            {game.board.map((boardRow, rowIndex) => {
-              return boardRow.map((cell, columnIndex) => {
-                return (
-                  <li
-                    key={columnIndex}
-                    onClick={() => handleClickCell(rowIndex, columnIndex)}
-                    className=" border-2 border-black rounded-xl text-6xl flex items-center justify-center"
-                  >
-                    {cell}
-                  </li>
-                );
-              });
-            })}
-          </ul>
+      </div>
+      <div className=" flex justify-center items-center ">
+        <div className="shadow-lg shadow-indigo-500 rounded-xl flex justify-center flex-col border h-[650px] w-[650px]">
+          <h1 className="text-3xl font-bold text-center">{dynamicHeader()}</h1>
+          <div className="flex flex-col">
+            <div className="flex justify-center">
+              <button
+                onClick={handleNewGame}
+                className="text-sm px-4 mb-7 sm:px-10 sm:py-3 py-1 shadow-lg rounded-lg bg-green-400 bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75"
+              >
+                {game.id == null ? "Start Game" : "Reset Game"}
+              </button>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <ul className="grid grid-cols-3 grid-rows-3 gap-3 h-[500px] w-[500px]">
+              {game.board.map((boardRow, rowIndex) => {
+                return boardRow.map((cell, columnIndex) => {
+                  return (
+                    <li
+                      key={columnIndex}
+                      onClick={() => handleClickCell(rowIndex, columnIndex)}
+                      className=" border-2 border-black rounded-xl text-6xl flex items-center justify-center"
+                    >
+                      {cell}
+                    </li>
+                  );
+                });
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

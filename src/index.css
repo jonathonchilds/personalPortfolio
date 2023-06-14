@@ -23,20 +23,3 @@
 }
 
 @tailwind utilities;
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(1200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-1200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}

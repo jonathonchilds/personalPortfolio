@@ -3,24 +3,17 @@ const hero = () => {
 
   return (
     <section className="flex justify-center h-[700px] mb-28">
-      <div className="flex justify-center items-center flex-col text-center text-3xl">
-        <p className={`${lines} font-bold text-4xl`}>Welcome!</p>
+      <div className="flex justify-center items-center flex-col text-center text-3xl px-96">
+        <p className={`${lines} font-extrabold text-6xl pb-24`}>Hey there!</p>
         <p className={`${lines}`}>
-          {" "}
-          Above are some pertinent links, including one for my capstone project
-          (ToolBox) and a current freelance project.
+          The links above include my capstone project, Toolbox, and my current
+          freelance contract, Art Studio!
         </p>
         <p className={`${lines}`}>
           {" "}
-          Below are a couple of games I coded during my bootcamp.
+          Below are two games I coded during my bootcamp, for now.
         </p>
-
-        <p className={`${lines}`}>There is more to come!</p>
-        <p className={`${lines}`}>
-          I wrote this lil portfolio site (from scratch) just last weekend
-          (06/11/2023)!
-        </p>
-        <p className={`${lines} font-bold`}>Check back soon!</p>
+        <p>Enjoy!</p>
       </div>
     </section>
   );
