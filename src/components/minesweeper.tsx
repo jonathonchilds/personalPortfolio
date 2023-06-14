@@ -213,8 +213,8 @@ export default function Minesweeper() {
           </h2>
         </div>
         <div className="flex justify-evenly w-full mb-8">
-          <img src="./assets/icons/reactlogo.png" alt="react logo" />
-          <img src="./assets/icons/typescriptlogo.png" alt="javascript logo" />
+          <img src="../public/assets/icons/reactlogo.png" alt="react logo" />
+          <img src="assets/icons/typescriptlogo.png" alt="javascript logo" />
 
           <img src="./assets/icons/tailwindlogo.png" alt="tailwind logo" />
           <img src="./assets/icons/html5logo.png" alt="html5 logo" />
