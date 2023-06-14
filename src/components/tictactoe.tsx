@@ -95,7 +95,7 @@ export default function Tictactoe() {
         </p>
         <p className="p-2 font-semibold flex justify-center items-center">
           It was an empowering learning experience!
-          <img src="/public/sweatEmoji.png" width={25} className="ml-2"></img>
+          <img src="/public/assets/sweatEmoji.png" width={25} className="ml-2"></img>
         </p>
         <div className="w-full flex justify-evenly mt-6 ">
           <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full bg-cyan-500  ">
