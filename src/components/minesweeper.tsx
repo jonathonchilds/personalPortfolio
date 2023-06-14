@@ -2,7 +2,7 @@
 // add chat bot for help?
 //add use effect or cache to pre-load API connection?
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
@@ -213,14 +213,11 @@ export default function Minesweeper() {
           </h2>
         </div>
         <div className="flex justify-evenly w-full mb-8">
-          <img src="src/assets/icons/reactlogo.png" alt="react logo" />
-          <img
-            src="src/assets/icons/typescriptlogo.png"
-            alt="javascript logo"
-          />
+          <img src="./assets/icons/reactlogo.png" alt="react logo" />
+          <img src="./assets/icons/typescriptlogo.png" alt="javascript logo" />
 
-          <img src="src/assets/icons/tailwindlogo.png" alt="tailwind logo" />
-          <img src="src/assets/icons/html5logo.png" alt="html5 logo" />
+          <img src="./assets/icons/tailwindlogo.png" alt="tailwind logo" />
+          <img src="./assets/icons/html5logo.png" alt="html5 logo" />
         </div>
         <p className="pb-2">What a wonderful classic!</p>
         <p className="pb-2">

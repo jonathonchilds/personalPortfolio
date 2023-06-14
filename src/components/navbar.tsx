@@ -18,7 +18,7 @@ const navbar = () => {
       <div className=" shadow-2xl rounded-xl bg-slate-50  flex w-[175px] justify-center items-center">
         <a href="https://www.linkedin.com/in/jonathonchilds/" target="_blank">
           <img
-            src="/src/assets/logos/LinkedIn-Logos/LI-Logo.png"
+            src="./assets/logos/LinkedIn-Logos/LI-Logo.png"
             alt="LinkedIn Logo"
             width={125}
           />{" "}
@@ -27,7 +27,7 @@ const navbar = () => {
       <div className=" shadow-2xl rounded-xl bg-slate-400 w-[175px]  flex justify-center items-center">
         <a href="https://www.github.com/jonathonchilds/" target="_blank">
           <img
-            src="/src/assets/logos/GitHub-Logos/GitHub_Logo.png"
+            src="./assets/logos/GitHub-Logos/GitHub_Logo.png"
             alt="GitHub Logo"
             width={100}
           />{" "}
@@ -44,7 +44,7 @@ const navbar = () => {
       <div className=" shadow-2xl rounded-xl bg-[#FAE169] w-[190px] py-2 pb-3 flex justify-center items-center">
         <a href="https://toolboxapp.herokuapp.com" target="_blank">
           <img
-            src="/src/assets/logos/toolbox.png"
+            src="./assets/logos/toolbox.png"
             alt="Capstone App Logo"
             width={150}
           />{" "}

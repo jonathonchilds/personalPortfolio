@@ -58,14 +58,11 @@ export default function Tictactoe() {
           </h2>
         </div>
         <div className="flex w-full justify-evenly mb-8">
-          <img src="src/assets/icons/reactlogo.png" alt="react logo" />
-          <img src="src/assets/icons/tailwindlogo.png" alt="tailwind logo" />
-          <img src="src/assets/icons/html5logo.png" alt="html5 logo" />
+          <img src="./assets/icons/reactlogo.png" alt="react logo" />
+          <img src="./assets/icons/tailwindlogo.png" alt="tailwind logo" />
+          <img src="./assets/icons/html5logo.png" alt="html5 logo" />
 
-          <img
-            src="src/assets/icons/typescriptlogo.png"
-            alt="javascript logo"
-          />
+          <img src="./assets/icons/typescriptlogo.png" alt="javascript logo" />
         </div>
         <p className="font-bold text-xl m-4">
           Tldr; I deployed this API for my classmates and I since the original
