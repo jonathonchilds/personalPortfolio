@@ -47,13 +47,15 @@ export default function Tictactoe() {
 
   return (
     <section
-      className="my-48 flex  sm:flex-row flex-col justify-around "
+      className="sm:my-48 flex sm:flex-row flex-col justify-around "
       id="tictactoe"
     >
       <div className="text-center sm:w-1/3 sm:py-6 flex flex-col  justify-center items-center content-evenly ">
-        <div className="flex mb-8">
-          <h1 className="font-extrabold text-6xl ">React-Tac-Toe</h1>
-          <h2 className="font-bold text-3xl font-kaushan ml-10 -rotate-12">
+        <div className="flex flex-col sm:flex-row sm:mb-8">
+          <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
+            React-Tac-Toe
+          </h1>
+          <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl font-kaushan  -rotate-12">
             Unbeatable!
           </h2>
         </div>
@@ -69,7 +71,7 @@ export default function Tictactoe() {
           on!
         </p>
         <p className="pb-1">Here's a proud project!</p>
-        <p>
+        <p className="sm:mx-0 mx-2">
           We were instructed to look at the structure of this API and based on
           the data it returned, code an app to play a game of (unbeatable)
           tic-tac-toe.
@@ -86,7 +88,7 @@ export default function Tictactoe() {
         <p className="pb-1">
           It's a great example of my desire to problem solve.
         </p>
-        <p className="pb-1">
+        <p className="pb-1 sm:mx-0 mx-2">
           Although before this project I'd never actually deployed an app nor
           been exposed to the Ruby language/framework, I dove in and got it
           running.
@@ -96,7 +98,7 @@ export default function Tictactoe() {
           <img src="/public/sweatEmoji.png" width={25} className="ml-2"></img>
         </p>
         <div className="w-full flex justify-evenly mt-6 ">
-          <button className="border p-4 px-6 rounded-full bg-cyan-500  ">
+          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full bg-cyan-500  ">
             <a
               href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx"
               target="_blank"
@@ -104,7 +106,7 @@ export default function Tictactoe() {
               View the source!
             </a>
           </button>
-          <button className="border p-4 px-6 rounded-full  bg-cyan-500 relative ">
+          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full  bg-cyan-500 ">
             <a href="https://tic-tac-toe-api.fly.dev/" target="_blank">
               Check out the API
             </a>
@@ -112,7 +114,7 @@ export default function Tictactoe() {
         </div>
       </div>
       <div className=" flex justify-center items-center ">
-        <div className="shadow-lg shadow-indigo-500 rounded-xl flex justify-center flex-col border h-[650px] w-[650px]">
+        <div className="sm:shadow-lg shadow-indigo-500 rounded-xl flex justify-center flex-col sm:border h-[650px] w-[650px]">
           <h1 className="text-3xl font-bold text-center">{dynamicHeader()}</h1>
           <div className="flex flex-col">
             <div className="flex justify-center">
@@ -125,7 +127,7 @@ export default function Tictactoe() {
             </div>
           </div>
           <div className="flex justify-center">
-            <ul className="grid grid-cols-3 grid-rows-3 gap-3 h-[500px] w-[500px]">
+            <ul className="grid grid-cols-3 grid-rows-3 gap-3 sm:h-[500px] sm:w-[500px] w-5/6 h-[300px]">
               {game.board.map((boardRow, rowIndex) => {
                 return boardRow.map((cell, columnIndex) => {
                   return (

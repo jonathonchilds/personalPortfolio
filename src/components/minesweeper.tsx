@@ -137,10 +137,10 @@ export default function Minesweeper() {
 
   return (
     <section
-      className=" flex  sm:flex-row flex-col justify-around mb-[20rem]"
+      className=" flex  sm:flex-row flex-col-reverse justify-around sm:mb-[20rem] mb-36"
       id="minesweeper"
     >
-      <div className="shadow-xl shadow-indigo-500 rounded-xl p-8 border">
+      <div className="sm:shadow-xl shadow-indigo-500 rounded-xl p-8 sm:border">
         <div className="flex justify-center">
           <div className=" px-2 py-4  w-fit h-fit flex items-center justify-center flex-col font-stone-700 ">
             <h1 className="text-[3rem]">
@@ -205,10 +205,12 @@ export default function Minesweeper() {
           </ul>
         </div>
       </div>
-      <div className="text-center flex flex-col justify-center items-center sm:w-1/3 sm:py-6 ">
-        <div className="flex mb-8">
-          <h1 className="font-extrabold text-6xl ">Minesweeper</h1>
-          <h2 className="font-bold text-3xl font-kaushan ml-10 -rotate-12">
+      <div className="text-center flex flex-col justify-center items-center sm:w-1/3 sm:py-6 content-evenly ">
+        <div className="sm:flex sm:mb-8">
+          <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
+            Minesweeper
+          </h1>
+          <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl font-kaushan  -rotate-12">
             A classic!
           </h2>
         </div>
@@ -239,7 +241,7 @@ export default function Minesweeper() {
           version I used SCSS for styling!
         </p>
         <div className="w-full flex justify-evenly mt-6 ">
-          <button className="border p-4 px-6 rounded-full bg-cyan-500  ">
+          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full  bg-cyan-500 ">
             <a
               href="https://github.com/jonathonchilds/Minesweeper/blob/trunk/src/App.tsx"
               target="_blank"
@@ -247,7 +249,7 @@ export default function Minesweeper() {
               View the source!
             </a>
           </button>
-          <button className="border p-4 px-6 rounded-full  bg-cyan-500 relative ">
+          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full  bg-cyan-500 ">
             <a href="https://minesweeper-api.herokuapp.com/" target="_blank">
               Check out the API
             </a>
