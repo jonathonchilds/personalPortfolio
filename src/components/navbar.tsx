@@ -36,7 +36,7 @@ const navbar = () => {
           />{" "}
         </a>
       </div>
-      <div className={`${buttonStyling} bg-green-200`}>
+      <div className={`${buttonStyling} bg-indigo-200`}>
         <a
           href="https://docs.google.com/document/d/1K2EI_wYVG9oVDB105Pzyzr9EU__4w6Ga/edit?usp=sharing&ouid=115700595236121989336&rtpof=true&sd=true"
           target="_blank"
