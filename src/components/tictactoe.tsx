@@ -95,7 +95,11 @@ export default function Tictactoe() {
         </p>
         <p className="p-2 font-semibold flex justify-center items-center">
           It was an empowering learning experience!
-          <img src="/public/assets/sweatEmoji.png" width={25} className="ml-2"></img>
+          <img
+            src="/public/assets/sweatEmoji.png"
+            width={25}
+            className="ml-2"
+          ></img>
         </p>
         <div className="w-full flex justify-evenly mt-6 ">
           <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full bg-cyan-500  ">
@@ -113,8 +117,8 @@ export default function Tictactoe() {
           </button>
         </div>
       </div>
-      <div className=" flex justify-center items-center ">
-        <div className="sm:shadow-lg shadow-indigo-500 rounded-xl flex justify-center flex-col sm:border h-[650px] w-[650px]">
+      <div className=" flex justify-center items-center  ">
+        <div className="sm:shadow-lg shadow-indigo-500 rounded-xl flex justify-center flex-col sm:border h-[650px] w-[650px] ">
           <h1 className="text-3xl font-bold text-center">{dynamicHeader()}</h1>
           <div className="flex flex-col">
             <div className="flex justify-center">
@@ -134,7 +138,7 @@ export default function Tictactoe() {
                     <li
                       key={columnIndex}
                       onClick={() => handleClickCell(rowIndex, columnIndex)}
-                      className=" border-2 border-black rounded-xl text-6xl flex items-center justify-center"
+                      className=" border-2 border-black rounded-xl text-6xl text-slate-100 flex items-center justify-center bg-indigo-500 hover:cursor-pointer hover:shadow-lg hover:opacity-95"
                     >
                       {cell}
                     </li>

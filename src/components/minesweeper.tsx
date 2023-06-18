@@ -3,6 +3,7 @@
 //add use effect or cache to pre-load API connection?
 
 import { useEffect, useState } from "react";
+import Example from "./projectinfotab";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
@@ -214,32 +215,34 @@ export default function Minesweeper() {
             A classic!
           </h2>
         </div>
-        <div className="flex justify-evenly w-full mb-8">
+        <div className="flex justify-evenly w-full pb-6">
           <img src="assets/icons/reactlogo.png" alt="react logo" />
           <img src="assets/icons/typescriptlogo.png" alt="javascript logo" />
 
           <img src="assets/icons/tailwindlogo.png" alt="tailwind logo" />
           <img src="assets/icons/html5logo.png" alt="html5 logo" />
         </div>
-        <p className="pb-2">What a wonderful classic!</p>
-        <p className="pb-2">
-          Here we have a strongly-typed React app that incorporates an external
-          API.
-        </p>
-        <p className="pb-2 font-semibold">
-          For this assignment, we were given the API web address and told to
-          analyze the data returned by calls and then code a game of
-          Minesweeper!
-        </p>
-        <p className="pb-2">
-          This gave rise to asynchornous updates to the game state and dynamic
-          rendering of the game board based on difficulty.
-        </p>
-        <p>
-          I also added plenty of styling flair, including the implementation of
-          icons from font-awesome :) *Note: For the original non-portfolio
-          version I used SCSS for styling!
-        </p>
+        <div className="text-slate-100 pb-6">
+          <p className="pb-2 ">What a wonderful classic!</p>
+          <p className="pb-2">
+            Here we have a strongly-typed React app that incorporates an
+            external API.
+          </p>
+          <p className="pb-2 font-semibold">
+            For this assignment, we were given the API web address and told to
+            analyze the data returned by calls and then code a game of
+            Minesweeper!
+          </p>
+          <p className="pb-2">
+            This gave rise to asynchornous updates to the game state and dynamic
+            rendering of the game board based on difficulty.
+          </p>
+          <p>
+            I also added plenty of styling flair, including the implementation
+            of icons from font-awesome :) *Note: For the original non-portfolio
+            version I used SCSS for styling!
+          </p>
+        </div>
         <div className="w-full flex justify-evenly mt-6 ">
           <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full  bg-cyan-500 ">
             <a
