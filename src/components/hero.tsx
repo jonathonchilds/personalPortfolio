@@ -11,7 +11,7 @@ const hero = () => {
         </p>
         <p className={`${lines}`}>
           {" "}
-          Below are two games I coded during my bootcamp, for now.
+          Below are two games I coded during my bootcamp.
         </p>
         <p>Enjoy!</p>
       </div>
