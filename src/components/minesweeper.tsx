@@ -3,7 +3,6 @@
 //add use effect or cache to pre-load API connection?
 
 import { useEffect, useState } from "react";
-import Example from "./projectinfotab";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
