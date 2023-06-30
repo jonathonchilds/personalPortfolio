@@ -6,8 +6,8 @@ const hero = () => {
       <div className="sm:text-3xl sm:px-96 flex justify-center items-center flex-col text-center text-xl text-slate-100 ">
         <p className={`${lines} font-extrabold text-6xl pb-24`}>Hey there!</p>
         <p className={`${lines}`}>
-          The links above include my capstone project, Toolbox, and my current
-          freelance contract, Art Studio!
+          The links above include my capstone project, Toolbox, and my recent
+          freelance contract for an art studio in Atlanta.
         </p>
         <p className={`${lines}`}>
           {" "}

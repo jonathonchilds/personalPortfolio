@@ -18,7 +18,7 @@ const navbar = () => {
 
   return (
     <nav className="sm:flex sm:flex-row sm:justify-evenly sm:pt-16 sm:items-stretch flex flex-col justify-center mt-6 items-center ">
-      <div className={`${buttonStyling} bg-slate-50`}>
+      <div className={`${buttonStyling} bg-[#FAE169]`}>
         <a href="https://www.linkedin.com/in/jonathonchilds/" target="_blank">
           <img
             src="./assets/logos/LinkedIn-Logos/LI-Logo.png"
@@ -27,7 +27,7 @@ const navbar = () => {
           />{" "}
         </a>
       </div>
-      <div className={`${buttonStyling} bg-gray-300`}>
+      <div className={`${buttonStyling} bg-[#FAE169]`}>
         <a href="https://www.github.com/jonathonchilds/" target="_blank">
           <img
             src="./assets/logos/GitHub-Logos/GitHub_Logo.png"
@@ -36,7 +36,7 @@ const navbar = () => {
           />{" "}
         </a>
       </div>
-      <div className={`${buttonStyling} bg-indigo-200`}>
+      <div className={`${buttonStyling} bg-[#FAE169]`}>
         <a
           href="https://docs.google.com/document/d/1K2EI_wYVG9oVDB105Pzyzr9EU__4w6Ga/edit?usp=sharing&ouid=115700595236121989336&rtpof=true&sd=true"
           target="_blank"
@@ -54,8 +54,8 @@ const navbar = () => {
         </a>
       </div>
 
-      <div className={`${buttonStyling} bg-indigo-200`}>
-        <a href="https://app.digitalartsstudio.net/" target="_blank">
+      <div className={`${buttonStyling} bg-[#FAE169]`}>
+        <a href="https://artcalculatorapp.vercel.app/" target="_blank">
           <span className="text-3xl text-slate-900 font-diphy">Art Studio</span>
         </a>
       </div>
