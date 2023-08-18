@@ -1,23 +1,10 @@
-// //TODO:
-// //Change avatar to my picture
-// // Change navigation links
-// // add link back to home page
-// // add link to github
-// // add link to linkedin
-// // add link to resume
-// // add link to email
-// // add link to phone number
-// //
-// icons by
-// <a target="_blank" href="https://icons8.com">Icons8</a>
-// implement codewars API with my data, a link to my favorite codewar, etc.
 
-const navbar = () => {
+const Navbar = () => {
   const buttonStyling =
     "shadow-2xl rounded-xl w-[175px] flex justify-center items-center hover:opacity-80 my-2 h-[50px] sm:h-auto py-2 sm:my-0 ";
 
   return (
-    <nav className="sm:flex sm:flex-row sm:justify-evenly sm:pt-16 sm:items-stretch flex flex-col justify-center mt-6 items-center ">
+    <nav className="flex flex-col justify-center items-center pt-10 sm:flex-row sm:justify-evenly sm:items-stretch top-0">
       <div className={`${buttonStyling} bg-[#FAE169]`}>
         <a href="https://www.linkedin.com/in/jonathonchilds/" target="_blank">
           <img
@@ -63,4 +50,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

@@ -23,3 +23,7 @@
 }
 
 @tailwind utilities;
+
+body {
+  @apply px-2 sm:px-0
+}

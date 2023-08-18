@@ -3,6 +3,7 @@
 //add use effect or cache to pre-load API connection?
 
 import { useEffect, useState } from "react";
+import { ApiButton, SourceButton } from "./Buttons";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
@@ -137,7 +138,7 @@ export default function Minesweeper() {
 
   return (
     <section
-      className=" flex  sm:flex-row flex-col-reverse justify-around sm:mb-[20rem] mb-36"
+      className=" h-screen flex sm:flex-row flex-col-reverse justify-around sm:mb-[20rem] mb-36"
       id="minesweeper"
     >
       <div className="sm:shadow-xl shadow-indigo-500 rounded-xl p-8 sm:border">
@@ -167,8 +168,8 @@ export default function Minesweeper() {
                 Expert
               </button>
               <p className="sm:hidden text-center mt-4">
-                Use a desktop browser to experience intermediate and expert
-                difficulties!
+                (Use a desktop browser to experience intermediate and expert
+                difficulties.)
               </p>
             </div>
           </div>
@@ -211,10 +212,10 @@ export default function Minesweeper() {
             Minesweeper
           </h1>
           <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl font-kaushan  -rotate-12">
-            A classic!
+            Classic!
           </h2>
         </div>
-        <div className="flex justify-evenly w-full pb-6">
+        <div className="flex flex-wrap justify-evenly sm:w-full pb-6 sm:px-0 px-2">
           <img src="assets/icons/reactlogo.png" alt="react logo" />
           <img src="assets/icons/typescriptlogo.png" alt="javascript logo" />
 
@@ -222,40 +223,26 @@ export default function Minesweeper() {
           <img src="assets/icons/html5logo.png" alt="html5 logo" />
         </div>
         <div className="text-slate-100 pb-6">
-          <p className="pb-2 ">What a wonderful classic!</p>
           <p className="pb-2">
-            Here we have a strongly-typed React app that incorporates an
-            external API.
+            I coded this classic game using TypeScript & React, with thorough
+            typing definitions.
           </p>
           <p className="pb-2 font-semibold">
-            For this assignment, we were given the API web address and told to
-            analyze the data returned by calls and then code a game of
-            Minesweeper!
+            I built the styling for this game twice - once using SCSS and again
+            using Tailwind CSS (seen here).
           </p>
           <p className="pb-2">
-            This gave rise to asynchornous updates to the game state and dynamic
-            rendering of the game board based on difficulty.
+            Minesweeper fetches from an external API to handle gameplay logic.
           </p>
-          <p>
-            I also added plenty of styling flair, including the implementation
-            of icons from font-awesome :) *Note: For the original non-portfolio
-            version I used SCSS for styling!
+          <p className="pb-2">
+            This game is fully-featured and includes a little extra styling
+            flair via font-awesome.
           </p>
+          <p className="pb-2">Go ahead and play a game!</p>
         </div>
         <div className="w-full flex justify-evenly mt-6 ">
-          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full  bg-cyan-500 ">
-            <a
-              href="https://github.com/jonathonchilds/Minesweeper/blob/trunk/src/App.tsx"
-              target="_blank"
-            >
-              View the source!
-            </a>
-          </button>
-          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full  bg-cyan-500 ">
-            <a href="https://minesweeper-api.herokuapp.com/" target="_blank">
-              Check out the API
-            </a>
-          </button>
+          <SourceButton href="https://github.com/jonathonchilds/Minesweeper/blob/trunk/src/App.tsx" />
+          <ApiButton href="https://minesweeper-api.herokuapp.com/" />
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 //update tic-tac-toe API documentation to reflect my changes!
 
 import { useState } from "react";
+import { ApiButton, SourceButton } from "./Buttons";
 
 export default function Tictactoe() {
   const [game, setGame] = useState({
@@ -47,7 +48,7 @@ export default function Tictactoe() {
 
   return (
     <section
-      className="sm:my-48 flex sm:flex-row flex-col justify-around "
+      className="h-screen sm:my-48 flex sm:flex-row flex-col justify-around "
       id="tictactoe"
     >
       <div className="text-center sm:w-1/3 sm:py-6 flex flex-col  justify-center items-center content-evenly ">
@@ -55,66 +56,31 @@ export default function Tictactoe() {
           <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
             React-Tac-Toe
           </h1>
-          <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl font-kaushan  -rotate-12">
-            Unbeatable!
+          <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl pt-2 font-kaushan underline underline-offset-4  -rotate-12">
+            Unbeatable
           </h2>
         </div>
-        <div className="flex w-full justify-evenly mb-8">
+        <div className="flex w-full flex-wrap justify-evenly mb-8">
           <img src="./assets/icons/reactlogo.png" alt="react logo" />
           <img src="./assets/icons/tailwindlogo.png" alt="tailwind logo" />
           <img src="./assets/icons/html5logo.png" alt="html5 logo" />
 
           <img src="./assets/icons/typescriptlogo.png" alt="javascript logo" />
         </div>
-        <p className="font-bold text-xl m-4">
-          Tl;dr I deployed this API for my classmates and I. React-Tac-Toe lives
-          on!
-        </p>
-        <p className="pb-1">Here's a proud project!</p>
-        <p className="sm:mx-0 mx-2">
-          We were instructed to look at the structure of this API and based on
-          the data it returned, code an app to play a game of (unbeatable)
-          tic-tac-toe.
-        </p>
-        <p className="font-semibold p-2">
-          Problem was, the API was taken down during Heroku's big changes last
-          year!
-        </p>
-        <p className="pb-2">Challenge accepted!</p>
         <p className="pb-1">
-          I forked the repo, installed the dependencies, and deployed the app
-          myself via fly.io! (Where the API is served to this day!)
-        </p>
-        <p className="pb-1">
-          It's a great example of my desire to problem solve.
-        </p>
-        <p className="pb-1 sm:mx-0 mx-2">
-          Although before this project I'd never actually deployed an app nor
-          been exposed to the Ruby language/framework, I dove in and got it
-          running.
+          My pride in this game lies in the fact that I cloned a broken API
+          (written in Ruby), installed the required dependencies, and then
+          deployed it for public use.
         </p>
         <p className="p-2 font-semibold flex justify-center items-center">
-          It was an empowering learning experience!
-          <img
-            src="/public/assets/sweatEmoji.png"
-            width={25}
-            className="ml-2"
-          ></img>
+          It was an awesome achievement!
+        </p>
+        <p className="p-2 font-semibold flex justify-center items-center">
+          Tic-Tac-Toe is written in TypeScript and uses React. Tailwind for styling!
         </p>
         <div className="w-full flex justify-evenly mt-6 ">
-          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full bg-cyan-500  ">
-            <a
-              href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx"
-              target="_blank"
-            >
-              View the source!
-            </a>
-          </button>
-          <button className="border sm:p-4 sm:px-6 py-2 px-4 text-sm sm:text-base rounded-full  bg-cyan-500 ">
-            <a href="https://tic-tac-toe-api.fly.dev/" target="_blank">
-              Check out the API
-            </a>
-          </button>
+          <SourceButton href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx" />
+          <ApiButton href="https://tic-tac-toe-api.fly.dev/" />
         </div>
       </div>
       <div className=" flex justify-center items-center  ">
