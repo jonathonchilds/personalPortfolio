@@ -141,7 +141,7 @@ export default function Minesweeper() {
       className=" h-screen flex sm:flex-row flex-col-reverse justify-around sm:mb-[20rem] mb-36"
       id="minesweeper"
     >
-      <div className="sm:shadow-xl shadow-indigo-500 rounded-xl p-8 sm:border">
+      <div className="sm:shadow-xl shadow-indigo-500 rounded-xl my-auto p-8 sm:border">
         <div className="flex justify-center">
           <div className=" px-2 py-4  w-fit h-fit flex items-center justify-center flex-col font-stone-700 ">
             <h1 className="text-[3rem]">
