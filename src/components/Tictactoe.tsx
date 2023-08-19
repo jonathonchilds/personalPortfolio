@@ -2,7 +2,7 @@
 //update tic-tac-toe API documentation to reflect my changes!
 
 import { useState } from "react";
-import { ApiButton, SourceButton } from "./Buttons1";
+import { ApiButton, SourceButton } from "./Buttons";
 
 export default function Tictactoe() {
   const [game, setGame] = useState({
