@@ -1,5 +1,5 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar1";
 
 const Hero = () => {
   const [text] = useTypewriter({

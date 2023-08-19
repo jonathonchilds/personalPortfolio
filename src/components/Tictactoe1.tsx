@@ -2,7 +2,7 @@
 //update tic-tac-toe API documentation to reflect my changes!
 
 import { useState } from "react";
-import { ApiButton, SourceButton } from "./Buttons";
+import { ApiButton, SourceButton } from "./Buttons1";
 
 export default function Tictactoe() {
   const [game, setGame] = useState({
@@ -76,7 +76,8 @@ export default function Tictactoe() {
           It was an awesome achievement!
         </p>
         <p className="p-2 font-semibold flex justify-center items-center">
-          Tic-Tac-Toe is written in TypeScript and uses React. Tailwind for styling!
+          Tic-Tac-Toe is written in TypeScript and uses React. Tailwind for
+          styling!
         </p>
         <div className="w-full flex justify-evenly mt-6 ">
           <SourceButton href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx" />

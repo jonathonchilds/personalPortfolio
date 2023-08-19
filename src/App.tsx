@@ -1,7 +1,7 @@
-import Minesweeper from "./components/Minesweeper";
-import Tictactoe from "./components/Tictactoe";
+import Minesweeper from "./components/Minesweeper1";
+import Tictactoe from "./components/Tictactoe1";
 
-import Hero from "./components/Hero";
+import Hero from "./components/Hero1";
 
 function App() {
   return (

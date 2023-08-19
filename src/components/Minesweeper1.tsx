@@ -3,7 +3,7 @@
 //add use effect or cache to pre-load API connection?
 
 import { useEffect, useState } from "react";
-import { ApiButton, SourceButton } from "./Buttons";
+import { ApiButton, SourceButton } from "./Buttons1";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
