@@ -1,4 +1,3 @@
-
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Intro = () => {
@@ -24,19 +23,19 @@ const Intro = () => {
       </p>
       <div>
         <a href="#minesweeper">
-          <button className="heroButton">Minesweeper</button>
+          <button className="primaryBtn">Minesweeper</button>
         </a>
         <a href="#tictactoe">
-          <button className="heroButton">Tic-tac-toe</button>
+          <button className="primaryBtn">Tic-tac-toe</button>
         </a>
         <a href="#todo">
-          <button className="heroButton">Todo App</button>
+          <button className="primaryBtn">Todo App</button>
         </a>
         <a href="#artApp">
-          <button className="heroButton">Art Studio App</button>
+          <button className="primaryBtn">Art Studio App</button>
         </a>
         <a href="#contact">
-          <button className="heroButton">Contact</button>
+          <button className="primaryBtn">Contact</button>
         </a>
       </div>
     </section>

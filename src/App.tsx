@@ -34,10 +34,10 @@ function App() {
         >
           <div className="space-x-16 mb-8">
             <a href="https://github.com/jonathonchilds/e2todo/blob/trunk/src/app/Provider.tsx">
-              <button className="heroButton">Source Code</button>
+              <button className="primaryBtn">Source Code</button>
             </a>
             <a href="https://e2todo-jonathonchilds.vercel.app/">
-              <button className="heroButton">Live Website</button>
+              <button className="primaryBtn">Live Website</button>
             </a>
           </div>
         </motion.div>
@@ -60,10 +60,10 @@ function App() {
         >
           <div className="space-x-16 mb-8">
             <a href="https://github.com/jonathonchilds/artcalculatorapp/blob/trunk/app/page.jsx">
-              <button className="heroButton">Source Code</button>
+              <button className="primaryBtn">Source Code</button>
             </a>
             <a href="https://app.digitalartsstudio.net">
-              <button className="heroButton">Live Website</button>
+              <button className="primaryBtn">Live Website</button>
             </a>
           </div>
         </motion.div>
@@ -78,7 +78,7 @@ function App() {
       <a href="#introduction">
         <footer className="sticky bottom-5 w-full cursor-pointer hidden md:block">
           <div className="flex items-center justify-end mr-5">
-            <ArrowSmallUpIcon className="h-10 w-10 text-gray-400/70 hover:text-[#F7AB0A]/80 transition-all " />
+            <ArrowSmallUpIcon className="h-10 w-10 text-gray-400/70 hover:text-sungold duration-300 " />
           </div>
         </footer>
       </a>

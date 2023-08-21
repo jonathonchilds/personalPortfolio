@@ -8,7 +8,12 @@ export default {
       moirai: ["Moirai One", "cursive"],
       diphy: ["Diphylleia", "serif"],
     },
-    extend: {},
+
+    extend: {
+      colors: {
+        sungold: "#F7AB0A",
+      },
+    },
   },
   plugins: [],
 };

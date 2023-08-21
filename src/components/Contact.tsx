@@ -21,21 +21,21 @@ export default function Contact() {
         <div className="space-y-10">
           <div className="text-center">
             <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/App.tsx">
-              <button className="heroButton">
+              <button className="primaryBtn">
                 Source Code For This Portfolio
               </button>
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 " />
+            <PhoneIcon className="text-sungold/80 h-7 w-7 " />
             <p className="text-2xl">(727) 967-3889</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 " />
+            <EnvelopeIcon className="text-sungold/80 h-7 w-7 " />
             <p className="text-2xl">jonathon.k.childs@gmail.com</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7" />
+            <MapPinIcon className="text-sungold/80 h-7 w-7" />
             <p className="text-2xl">Tampa / Saint Petersburg, Florida</p>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-sungold/80 hover:bg-sungold py-5 px-10 rounded-md text-black font-bold text-lg"
           >
             Submit
           </button>
