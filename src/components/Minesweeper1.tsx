@@ -1,8 +1,8 @@
-//TODO: Add number of bombs
-// add chat bot for help?
-//add use effect or cache to pre-load API connection?
+//Add number of bombs
+//Integrate AI chat
 
 import { useEffect, useState } from "react";
+
 import { ApiButton, SourceButton } from "./Buttons";
 
 export default function Minesweeper() {
@@ -56,7 +56,6 @@ export default function Minesweeper() {
       setGame(newGame);
     }
   }
-  console.log(game);
 
   async function handleClickCell(
     row: number,
@@ -128,20 +127,17 @@ export default function Minesweeper() {
     }
   }
 
-  function buttonStyling() {
-    return "text-sm px-4 sm:px-10 sm:py-3 rounded-lg py-1 shadow-lg bg-green-400 bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75";
-  }
+  const buttonStyling = "text-sm px-4 sm:px-10 sm:py-3 rounded-lg py-1 shadow-lg bg-green-400 bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75";
 
-  function cellStyling() {
-    return "m-0 p-0 list-none border border-yellow-400  h-[38px] w-[38px] flex items-center justify-center ";
-  }
+  const cellStyling = "m-0 p-0 list-none border border-yellow-400  h-[38px] w-[38px] flex items-center justify-center ";
+  
 
   return (
     <section
-      className=" h-screen flex sm:flex-row flex-col-reverse justify-around sm:mb-[20rem] mb-36"
+      className=" h-screen flex sm:flex-row flex-col-reverse justify-around pt-14"
       id="minesweeper"
     >
-      <div className="sm:shadow-xl shadow-indigo-500 rounded-xl my-auto p-8 sm:border">
+      <div className="rounded-xl my-auto p-8 sm:border">
         <div className="flex justify-center">
           <div className=" px-2 py-4  w-fit h-fit flex items-center justify-center flex-col font-stone-700 ">
             <h1 className="text-[3rem]">

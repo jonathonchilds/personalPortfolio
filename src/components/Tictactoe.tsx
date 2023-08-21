@@ -1,7 +1,6 @@
-//add useEffect hook to create new game on page load instead of having to use "new game" button
-//update tic-tac-toe API documentation to reflect my changes!
 
 import { useState } from "react";
+
 import { ApiButton, SourceButton } from "./Buttons";
 
 export default function Tictactoe() {
@@ -48,13 +47,13 @@ export default function Tictactoe() {
 
   return (
     <section
-      className="h-screen sm:my-48 flex sm:flex-row flex-col justify-around "
+      className="flex sm:flex-row flex-col justify-around py-24 mt-14"
       id="tictactoe"
     >
       <div className="text-center sm:w-1/3 sm:py-6 flex flex-col  justify-center items-center content-evenly ">
         <div className="flex flex-col sm:flex-row sm:mb-8">
           <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
-            React-Tac-Toe
+            Tic-Tac-Toe
           </h1>
           <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl pt-2 font-kaushan underline underline-offset-4  -rotate-12">
             Unbeatable
