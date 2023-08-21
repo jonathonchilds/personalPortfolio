@@ -19,6 +19,13 @@ export default function Contact() {
     <div className="h-screen relative flex items-center justify-center">
       <div className="flex flex-col space-y-10 ">
         <div className="space-y-10">
+          <div className="text-center">
+            <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/App.tsx">
+              <button className="heroButton">
+                Source Code For This Portfolio
+              </button>
+            </a>
+          </div>
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 " />
             <p className="text-2xl">(727) 967-3889</p>

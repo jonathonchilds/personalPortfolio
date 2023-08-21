@@ -1,4 +1,3 @@
-
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 
@@ -25,16 +24,15 @@ function Header() {
         />
       </motion.div>
       <motion.div
-        className="flex flex-row items-center gray cursor-pointer"
+        className="flex flex-row items-center gray"
         initial={{ opacity: 0, x: 500, scale: 0.5 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.5 }}
       >
         <a href="contact">
           <SocialIcon
-            className="cursor-pointer"
             network="email"
-            target="#contact"
+            url="#contact"
             fgColor="gray"
             bgColor="transparent"
           />

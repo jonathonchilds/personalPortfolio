@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowSmallUpIcon } from "@heroicons/react/24/solid";
 
 import Contact from "./components/Contact";
-import Minesweeper from "./components/Minesweeper1";
+import Minesweeper from "./components/Minesweeper";
 import Tictactoe from "./components/Tictactoe";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
