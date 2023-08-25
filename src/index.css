@@ -35,3 +35,9 @@ body {
 .primaryBtn {
   @apply px-6 py-2 mx-2 border rounded-full uppercase text-xs tracking-widest duration-300 border-sungold/40 hover:text-sungold;
 }
+
+.secondaryBtn {
+  @apply px-6 py-2 mx-2 border rounded-full uppercase text-xs tracking-widest duration-300 border-[#5c0af7] hover:text-sungold;
+
+}
+

@@ -12,7 +12,8 @@ export default {
     extend: {
       colors: {
         sungold: "#F7AB0A",
-        offwhite: "#fff3c2"
+        offwhite: "#fff3c2",
+        purple: "#5c0af7",
       },
     },
   },
