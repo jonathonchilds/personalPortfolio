@@ -3,7 +3,6 @@
 
 import { useEffect, useState } from "react";
 
-import { ApiButton, SourceButton } from "./Buttons";
 
 export default function Minesweeper() {
   const [game, setGame] = useState<Game>({
@@ -135,7 +134,7 @@ export default function Minesweeper() {
 
   return (
     <section
-      className=" h-screen flex sm:flex-row flex-col-reverse justify-around pt-14"
+      className="h-screen flex sm:flex-row flex-col-reverse justify-around "
       id="minesweeper"
     >
       <div className="rounded-xl my-auto p-8 sm:border">
@@ -177,7 +176,7 @@ export default function Minesweeper() {
           } flex justify-center `}
         >
           <ul
-            className={`difficultyStyle  border-yellow-400 rounded position-relative border difficulty-${game.board.length}`}
+            className={`difficultyStyle  border-sungold rounded position-relative border difficulty-${game.board.length}`}
           >
             {game.board.map((row, rowIndex) =>
               row.map((cell, columnIndex) => (
@@ -208,9 +207,6 @@ export default function Minesweeper() {
           <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
             Minesweeper
           </h1>
-          <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl font-kaushan  -rotate-12">
-            Classic!
-          </h2>
         </div>
         <div className="flex flex-wrap justify-evenly sm:w-full pb-6 sm:px-0 px-2">
           <img src="assets/icons/reactlogo.png" alt="react logo" />
@@ -221,8 +217,7 @@ export default function Minesweeper() {
         </div>
         <div className="text-slate-100 pb-6">
           <p className="pb-2">
-            I coded this classic game using TypeScript & React, with thorough
-            typing definitions.
+            I built this classic game using TypeScript & React. 
           </p>
           <p className="pb-2 font-semibold">
             I built the styling for this game twice - once using SCSS and again
@@ -236,10 +231,14 @@ export default function Minesweeper() {
             flair via font-awesome.
           </p>
           <p className="pb-2">Go ahead and play a game!</p>
-        </div>
+        </div> 
         <div className="w-full flex justify-evenly mt-6 ">
-          <SourceButton href="https://github.com/jonathonchilds/Minesweeper/blob/trunk/src/App.tsx" />
-          <ApiButton href="https://minesweeper-api.herokuapp.com/" />
+          <a href="https://github.com/jonathonchilds/Minesweeper/blob/trunk/src/App.tsx">
+            <button className="primaryBtn w-52">Source Code</button>
+          </a>
+          <a href="https://minesweeper-api.herokuapp.com/">
+            <button className="primaryBtn w-52">API</button>
+          </a>
         </div>
       </div>
     </section>

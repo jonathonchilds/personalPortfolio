@@ -25,7 +25,7 @@
 @tailwind utilities;
 
 body {
-  @apply px-2 sm:px-0 text-gray-500;
+  @apply px-2 sm:px-0 text-offwhite;
 }
 
 .contactInput {
@@ -33,7 +33,5 @@ body {
 }
 
 .primaryBtn {
-  @apply px-6 py-2 mx-2 border rounded-full uppercase text-xs tracking-widest text-gray-500 duration-300 border-sungold/40 hover:text-sungold;
+  @apply px-6 py-2 mx-2 border rounded-full uppercase text-xs tracking-widest duration-300 border-sungold/40 hover:text-sungold;
 }
-
-

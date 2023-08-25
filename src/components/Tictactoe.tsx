@@ -1,7 +1,5 @@
-
 import { useState } from "react";
 
-import { ApiButton, SourceButton } from "./Buttons";
 
 export default function Tictactoe() {
   const [game, setGame] = useState({
@@ -79,8 +77,12 @@ export default function Tictactoe() {
           styling!
         </p>
         <div className="w-full flex justify-evenly mt-6 ">
-          <SourceButton href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx" />
-          <ApiButton href="https://tic-tac-toe-api.fly.dev/" />
+          <a href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx">
+            <button className="primaryBtn w-52">Source Code</button>
+          </a>
+          <a href="https://tic-tac-toe-api.fly.dev/">
+            <button className="primaryBtn w-52">API</button>
+          </a>
         </div>
       </div>
       <div className=" flex justify-center items-center  ">

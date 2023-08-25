@@ -1,6 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 type Inputs = {
   name: string;
@@ -27,16 +26,16 @@ export default function Contact() {
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-sungold/80 h-7 w-7 " />
-            <p className="text-2xl">(727) 967-3889</p>
+            {/* <PhoneIcon className="text-sungold/80 h-7 w-7 " /> */}
+            <p className="text-2xl tracking-widest">(727) 967-3889</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-sungold/80 h-7 w-7 " />
-            <p className="text-2xl">jonathon.k.childs@gmail.com</p>
+            {/* <EnvelopeIcon className="text-sungold/80 h-7 w-7 " /> */}
+            <p className="text-2xl tracking-widest">jonathon.k.childs@gmail.com</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-sungold/80 h-7 w-7" />
-            <p className="text-2xl">Tampa / Saint Petersburg, Florida</p>
+            {/* <MapPinIcon className="text-sungold/80 h-7 w-7" /> */}
+            <p className="text-2xl tracking-widest">Tampa / Saint Petersburg, Florida</p>
           </div>
         </div>
         <form

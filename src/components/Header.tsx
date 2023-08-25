@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Header() {
   return (
-    <header className="sticky top-0 px-12 pt-6 flex justify-between w-full z-20 ">
+    <header className="fixed top-0 px-12 py-4 flex justify-between w-full z-20 bg-black">
       <motion.div
         className="flex flex-row items-center"
         initial={{ opacity: 0, x: -500, scale: 0.5 }}

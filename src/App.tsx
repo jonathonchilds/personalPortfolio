@@ -1,15 +1,19 @@
-import { motion } from "framer-motion";
-import { ArrowSmallUpIcon } from "@heroicons/react/24/solid";
 
 import Contact from "./components/Contact";
 import Minesweeper from "./components/Minesweeper";
 import Tictactoe from "./components/Tictactoe";
-import Header from "./components/Header";
 import Intro from "./components/Intro";
+import TodoFrame from "./components/TodoFrame";
+import ArtCalcFrame from "./components/ArtCalcFrame";
+
+import Header from "./components/Header";
+import { ArrowSmallUpIcon } from "@heroicons/react/24/solid";
 
 function App() {
+
+
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden">
+    <main className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden ">
       <Header />
       <section id="introduction" className="snap-start">
         <Intro />
@@ -20,57 +24,11 @@ function App() {
       <section id="tictactoe" className="snap-start">
         <Tictactoe />
       </section>
-      <section
-        id="todo"
-        className="snap-start py-[90px] h-screen overflow-hidden text-center z-30 top-0"
-      >
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: -1,
-          }}
-          transition={{ duration: 3 }}
-          whileInView={{ opacity: 1, y: 1 }}
-        >
-          <div className="space-x-16 mb-8">
-            <a href="https://github.com/jonathonchilds/e2todo/blob/trunk/src/app/Provider.tsx">
-              <button className="primaryBtn">Source Code</button>
-            </a>
-            <a href="https://e2todo-jonathonchilds.vercel.app/">
-              <button className="primaryBtn">Live Website</button>
-            </a>
-          </div>
-        </motion.div>
-        <iframe
-          src="https://e2todo.vercel.app/"
-          className="h-screen w-screen overflow-hidden snap-start"
-        ></iframe>
+      <section id="todo" className="snap-start">
+        <TodoFrame />
       </section>
-      <section
-        id="artApp"
-        className="snap-start py-[90px] h-screen overflow-hidden text-center"
-      >
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: -1,
-          }}
-          transition={{ duration: 3 }}
-          whileInView={{ opacity: 1, y: 1 }}
-        >
-          <div className="space-x-16 mb-8">
-            <a href="https://github.com/jonathonchilds/artcalculatorapp/blob/trunk/app/page.jsx">
-              <button className="primaryBtn">Source Code</button>
-            </a>
-            <a href="https://app.digitalartsstudio.net">
-              <button className="primaryBtn">Live Website</button>
-            </a>
-          </div>
-        </motion.div>
-        <iframe
-          src="https://app.digitalartsstudio.net/"
-          className="h-screen w-screen overflow-hidden snap-start"
-        ></iframe>
+      <section id="artApp" className="snap-start">
+        <ArtCalcFrame />
       </section>
       <section id="contact" className="snap-start">
         <Contact />
