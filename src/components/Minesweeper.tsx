@@ -220,33 +220,17 @@ export default function Minesweeper() {
       return "Nice one! Choose a difficulty to play again.";
     } else if (game.state == "lost") {
       return "Choose a difficulty to play again.";
-    } else if (game.state == undefined) {
-      return "";
-      // eslint-disable-next-line no-constant-condition
-    } else if (game.state == "playing" || "new") {
-      return "Good luck!";
-    }
+    } else return "";
   }
 
-  const buttonStyling =
-    "text-sm px-4 sm:px-10 sm:py-3 rounded-lg py-1 bg-[#5c0af7] bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75";
-
-  const cellStyling =
-    "m-0 p-0 list-none border-sungold/80 border-[.5px] h-[38px] w-[38px] flex items-center justify-center ";
-  
-  function dynamicCellStyling() {
-    if (game.board.length === 8)
-    {
+  function cellStyling() {
+    if (game.board.length === 8) {
       return "m-0 p-0 list-none border-sungold/80 border-[.5px] h-[38px] w-[38px] flex items-center justify-center ";
-    }
-    else if (game.board.length === 16)
-    {
+    } else if (game.board.length === 16) {
       return "m-0 p-0 list-none border-sungold/80 border-[.5px] h-[30px] w-[30px] flex items-center justify-center ";
-    }
-    else if (game.board.length === 24)
-    {
+    } else if (game.board.length === 24) {
       return "m-0 p-0 list-none border-sungold/80 border-[.5px] h-[24px] w-[24px] flex items-center justify-center ";
-      }
+    }
   }
 
   return (
@@ -254,21 +238,47 @@ export default function Minesweeper() {
       className="h-screen flex sm:flex-row flex-col-reverse justify-around "
       id="minesweeper"
     >
+      <div className="text-center flex flex-col justify-center items-center sm:w-1/3 sm:py-6 content-evenly ">
+        <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] pb-6 ">
+          Minesweeper
+        </h1>
+        <div className="flex space-y-4 justify-center flex-col pb-16">
+          <button
+            onClick={() => handleNewGame(0)}
+            className={`secondaryBtn w-40  `}
+          >
+            Easy
+          </button>
+          <button
+            onClick={() => handleNewGame(1)}
+            className={`secondaryBtn w-40 hidden sm:block`}
+          >
+            Intermediate
+          </button>
+          <button
+            onClick={() => handleNewGame(2)}
+            className={`secondaryBtn w-40 hidden sm:block`}
+          >
+            Expert
+          </button>
+          <p className="sm:hidden text-center mt-4">
+            (Use a desktop browser to experience intermediate and expert
+            difficulties.)
+          </p>
+        </div>
+      </div>
       <div className="my-auto">
-        <div
-          className={` ${
-            game.state == undefined ? "pt-0" : "pt-4"
-          } flex justify-center `}
-        >
+        <h2 className="text-center text-lg pb-4">{dynamicH2()}</h2>
+        <div>
           <ul
             className={`difficultyStyle  border-sungold/80 rounded position-relative border difficulty-${game.board.length}`}
           >
             {game.board.map((row, rowIndex) =>
               row.map((cell, columnIndex) => (
                 <li
-                  className={`${dynamicCellStyling()} ${
+                  className={`${cellStyling()} ${
                     game.state == ("lost" || "won")
-                      ? "pointer-events-none opacity-60"
+                      ? "pointer-events-none opacity-30"
                       : transformClassName(cell)
                   }
                 `}
@@ -287,111 +297,18 @@ export default function Minesweeper() {
           </ul>
         </div>
       </div>
-      <div className="text-center flex flex-col justify-center items-center sm:w-1/3 sm:py-6 content-evenly ">
-        <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] pb-6 ">
-          Minesweeper
-        </h1>
-        <div className="flex sm:flex-row sm:items-center justify-center flex-col space-x-4 pb-16">
-          <button onClick={() => handleNewGame(0)} className={`secondaryBtn  `}>
-            Easy
-          </button>
-          <button
-            onClick={() => handleNewGame(1)}
-            className={`secondaryBtn hidden sm:block`}
-          >
-            Intermediate
-          </button>
-          <button
-            onClick={() => handleNewGame(2)}
-            className={`secondaryBtn hidden sm:block`}
-          >
-            Expert
-          </button>
-          <p className="sm:hidden text-center mt-4">
-            (Use a desktop browser to experience intermediate and expert
-            difficulties.)
-          </p>
-        </div>
-        
-        <h2 className="text-center text-2xl p-4 pb-16">{dynamicH2()}</h2>
-        {/* <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <Popover.Button
-                    className={`
-                ${open ? "" : "text-opacity-90"}
-                group inline-flex items-center rounded-md bg-orange-700 px-3 py-2 text-base font-medium text-white hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
-                  >
-                    <span>Solutions</span>
-                    <ChevronDownIcon
-                      className={`${open ? "" : "text-opacity-70"}
-                  ml-2 h-5 w-5 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
-                      aria-hidden="true"
-                    />
-                  </Popover.Button>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                          {solutions.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                            >
-                              <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
-                                <item.icon aria-hidden="true" />
-                              </div>
-                              <div className="ml-4">
-                                <p className="text-sm font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                        <div className="bg-gray-50 p-4">
-                          <a
-                            href="##"
-                            className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                          >
-                            <span className="flex items-center">
-                              <span className="text-sm font-medium text-gray-900">
-                                Documentation
-                              </span>
-                            </span>
-                            <span className="block text-sm text-gray-500">
-                              Start integrating products and tools
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </Popover.Panel>
-                  </Transition>
-                </>
-              )}
-            </Popover> */}
-
-        <div className="w-full flex justify-evenly mt-6 ">
-          <a href="https://github.com/jonathonchilds/Minesweeper/blob/trunk/src/App.tsx">
-            <button className="primaryBtn w-52">Source Code</button>
-          </a>
-          <a href="https://minesweeper-api.herokuapp.com/">
-            <button className="primaryBtn w-52">API</button>
-          </a>
-        </div>
-      </div>
     </section>
   );
 }
+
+// React-Powered: Harnessing the latest features of React, ensuring a fast, responsive, and user-friendly interface.
+// Dynamic Drag & Drop: Integrated with react-beautiful-dnd, making task management intuitive and engaging.
+// Global State Management: Using React's useContext for efficient state management, ensuring swift updates across the app.
+// Adaptive Design: Leveraging custom hooks like useMediaQuery to dynamically adjust to user screen sizes.
+// Styled with Tailwind: Modern UI design using the Tailwind CSS framework, complete with custom utilities for fine-tuned, pixel-perfect designs.
+// Dark Mode Capabilities: Integrated with next-themes for seamless theme toggling, enhancing user experience.
+// Backend Integration: Connected with supabase for reliable database operations – CRUD functionalities for tasks, ensuring data persistence.
+// Modular Architecture: Organized component-based structure, making the codebase maintainable and scalable.
+// Mobile-Responsive: Includes both desktop and mobile footers, ensuring a seamless experience across devices.
+// Efficient Error Handling: Advanced error checks in async functions for optimal user feedback and debugging.
+// Future-Ready: Built using modern ES6+ syntax and TypeScript for type-safety, making the app robust and less error-prone.

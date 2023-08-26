@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 
 export default function Tictactoe() {
   const [game, setGame] = useState({
@@ -11,6 +10,11 @@ export default function Tictactoe() {
     id: null,
     winner: null,
   });
+
+  useEffect(() => {
+    handleNewGame();
+  }, []);
+
   async function handleNewGame() {
     const response = await fetch("https://tic-tac-toe-api.fly.dev/game", {
       method: "POST",
@@ -39,74 +43,51 @@ export default function Tictactoe() {
     if (game.winner == "X") {
       return `The computer wins!`;
     } else if (game.winner == "TIE") {
-      return `It's a tie! (You can't win!)`;
+      return `It's a tie!`;
     } else return "";
   };
 
   return (
     <section
-      className="flex sm:flex-row flex-col justify-around py-24 mt-14"
+      className="flex sm:flex-row flex-col justify-around pt-16"
       id="tictactoe"
     >
-      <div className="text-center sm:w-1/3 sm:py-6 flex flex-col  justify-center items-center content-evenly ">
-        <div className="flex flex-col sm:flex-row sm:mb-8">
-          <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
-            Tic-Tac-Toe
-          </h1>
-          <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl pt-2 font-kaushan underline underline-offset-4  -rotate-12">
-            Unbeatable
-          </h2>
+      <div className="text-center flex flex-col items-center space-y-6 justify-evenly ">
+        <div>
+          <div className="flex space-x-6 pb-12">
+            <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl pt-2 font-kaushan -rotate-12 text-sungold">
+              Unbeatable
+            </h2>
+            <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
+              Tic-Tac-Toe
+            </h1>
+          </div>
+          <button onClick={handleNewGame} className="secondaryBtn">
+            {game.id == null ? "Start Game" : "Reset Game"}
+          </button>
         </div>
-        <div className="flex w-full flex-wrap justify-evenly mb-8">
-          <img src="./assets/icons/reactlogo.png" alt="react logo" />
-          <img src="./assets/icons/tailwindlogo.png" alt="tailwind logo" />
-          <img src="./assets/icons/html5logo.png" alt="html5 logo" />
-
-          <img src="./assets/icons/typescriptlogo.png" alt="javascript logo" />
-        </div>
-        <p className="pb-1">
-          My pride in this game lies in the fact that I cloned a broken API
-          (written in Ruby), installed the required dependencies, and then
-          deployed it for public use.
-        </p>
-        <p className="p-2 font-semibold flex justify-center items-center">
-          It was an awesome achievement!
-        </p>
-        <p className="p-2 font-semibold flex justify-center items-center">
-          Tic-Tac-Toe is written in TypeScript and uses React. Tailwind for
-          styling!
-        </p>
-        <div className="w-full flex justify-evenly mt-6 ">
+        {/* <div className="w-full flex justify-evenly mt-6 ">
           <a href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx">
             <button className="primaryBtn w-52">Source Code</button>
           </a>
           <a href="https://tic-tac-toe-api.fly.dev/">
             <button className="primaryBtn w-52">API</button>
           </a>
-        </div>
+        </div> */}
       </div>
       <div className=" flex justify-center items-center  ">
-        <div className="sm:shadow-lg shadow-indigo-500 rounded-xl flex justify-center flex-col sm:border h-[650px] w-[650px] ">
-          <h1 className="text-3xl font-bold text-center">{dynamicHeader()}</h1>
-          <div className="flex flex-col">
-            <div className="flex justify-center">
-              <button
-                onClick={handleNewGame}
-                className="text-sm px-4 mb-7 sm:px-10 sm:py-3 py-1 shadow-lg rounded-lg bg-green-400 bg-opacity-60 m-2 hover:cursor-pointer hover:shadow-lg hover:opacity-75"
-              >
-                {game.id == null ? "Start Game" : "Reset Game"}
-              </button>
-            </div>
-          </div>
+        <div className="flex justify-center flex-col  h-[650px] w-[650px] ">
+          <h1 className="text-3xl font-bold text-center pb-6">{dynamicHeader()}</h1>
+
           <div className="flex justify-center">
-            <ul className="grid grid-cols-3 grid-rows-3 gap-3 sm:h-[500px] sm:w-[500px] w-5/6 h-[300px]">
+            <ul className="grid grid-cols-3 grid-rows-3 gap-5 sm:h-[500px] sm:w-[500px] h-[300px]">
               {game.board.map((boardRow, rowIndex) => {
                 return boardRow.map((cell, columnIndex) => {
                   return (
                     <li
                       key={columnIndex}
                       onClick={() => handleClickCell(rowIndex, columnIndex)}
-                      className=" border-2 border-black rounded-xl text-6xl text-slate-100 flex items-center justify-center bg-indigo-500 hover:cursor-pointer hover:shadow-lg hover:opacity-95"
+                      className=" rounded-lg text-6xl flex items-center justify-center bg-purple hover:cursor-pointer  hover:opacity-80"
                     >
                       {cell}
                     </li>
