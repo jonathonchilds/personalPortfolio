@@ -166,7 +166,7 @@ export default function Minesweeper() {
       </div>
       <div className="my-auto">
         <h2 className="text-center text-lg pb-4 h-12">{dynamicH2()}</h2>
-        <div className="w-[600px]">
+        <div className="w-[600px] flex justify-center">
           <ul
             className={`difficultyStyle  border-sungold/80 rounded position-relative border difficulty-${game.board.length}`}
           >
