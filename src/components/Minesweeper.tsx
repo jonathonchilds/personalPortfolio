@@ -142,19 +142,19 @@ export default function Minesweeper() {
         <div className="flex space-y-4 justify-center flex-col pb-16">
           <button
             onClick={() => handleNewGame(0)}
-            className={`secondaryBtn w-40  `}
+            className={`primaryBtn w-40  `}
           >
             Easy
           </button>
           <button
             onClick={() => handleNewGame(1)}
-            className={`secondaryBtn w-40 hidden sm:block`}
+            className={`primaryBtn w-40 hidden sm:block`}
           >
             Intermediate
           </button>
           <button
             onClick={() => handleNewGame(2)}
-            className={`secondaryBtn w-40 hidden sm:block`}
+            className={`primaryBtn w-40 hidden sm:block`}
           >
             Expert
           </button>
@@ -165,8 +165,8 @@ export default function Minesweeper() {
         </div>
       </div>
       <div className="my-auto">
-        <h2 className="text-center text-lg pb-4">{dynamicH2()}</h2>
-        <div>
+        <h2 className="text-center text-lg pb-4 h-12">{dynamicH2()}</h2>
+        <div className="w-[600px]">
           <ul
             className={`difficultyStyle  border-sungold/80 rounded position-relative border difficulty-${game.board.length}`}
           >

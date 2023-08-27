@@ -1,6 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 
-
 type Inputs = {
   name: string;
   email: string;
@@ -26,16 +25,17 @@ export default function Contact() {
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            {/* <PhoneIcon className="text-sungold/80 h-7 w-7 " /> */}
             <p className="text-2xl tracking-widest">(727) 967-3889</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            {/* <EnvelopeIcon className="text-sungold/80 h-7 w-7 " /> */}
-            <p className="text-2xl tracking-widest">jonathon.k.childs@gmail.com</p>
+            <p className="text-2xl tracking-widest">
+              jonathon.k.childs@gmail.com
+            </p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            {/* <MapPinIcon className="text-sungold/80 h-7 w-7" /> */}
-            <p className="text-2xl tracking-widest">Tampa / Saint Petersburg, Florida</p>
+            <p className="text-2xl tracking-widest">
+              Tampa / Saint Petersburg, Florida
+            </p>
           </div>
         </div>
         <form
@@ -69,7 +69,7 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="bg-sungold/80 hover:bg-sungold py-5 px-10 rounded-md text-black font-bold text-lg"
+            className=" hover:text-sungold border border-purple py-5 px-10 rounded-md font-bold text-lg"
           >
             Submit
           </button>

@@ -41,7 +41,7 @@ export default function Tictactoe() {
 
   const dynamicHeader = () => {
     if (game.winner == "X") {
-      return `The computer wins!`;
+      return `The program wins!`;
     } else if (game.winner == "TIE") {
       return `It's a tie!`;
     } else return "";
@@ -49,7 +49,7 @@ export default function Tictactoe() {
 
   return (
     <section
-      className="flex sm:flex-row flex-col justify-around pt-16"
+      className="flex sm:flex-row flex-col justify-around h-screen pt-16"
       id="tictactoe"
     >
       <div className="text-center flex flex-col items-center space-y-6 justify-evenly ">
@@ -62,7 +62,7 @@ export default function Tictactoe() {
               Tic-Tac-Toe
             </h1>
           </div>
-          <button onClick={handleNewGame} className="secondaryBtn">
+          <button onClick={handleNewGame} className="primaryBtn">
             {game.id == null ? "Start Game" : "Reset Game"}
           </button>
         </div>
@@ -77,7 +77,9 @@ export default function Tictactoe() {
       </div>
       <div className=" flex justify-center items-center  ">
         <div className="flex justify-center flex-col  h-[650px] w-[650px] ">
-          <h1 className="text-3xl font-bold text-center pb-6">{dynamicHeader()}</h1>
+          <h1 className="text-3xl font-bold text-center pb-6 h-12">
+            {dynamicHeader()}
+          </h1>
 
           <div className="flex justify-center">
             <ul className="grid grid-cols-3 grid-rows-3 gap-5 sm:h-[500px] sm:w-[500px] h-[300px]">

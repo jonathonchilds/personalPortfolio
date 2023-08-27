@@ -1,4 +1,3 @@
-
 import Contact from "./components/Contact";
 import Minesweeper from "./components/Minesweeper";
 import Tictactoe from "./components/Tictactoe";
@@ -10,10 +9,8 @@ import Header from "./components/Header";
 import { ArrowSmallUpIcon } from "@heroicons/react/24/solid";
 
 function App() {
-
-
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden ">
+    <main className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden scrollbar ">
       <Header />
       <section id="introduction" className="snap-start">
         <Intro />
