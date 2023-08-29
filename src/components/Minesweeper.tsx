@@ -132,36 +132,52 @@ export default function Minesweeper() {
 
   return (
     <section
-      className="h-screen flex sm:flex-row flex-col-reverse justify-around "
+      className="h-screen flex sm:flex-row flex-col-reverse justify-around"
       id="minesweeper"
     >
-      <div className="text-center flex flex-col justify-center items-center sm:w-1/3 sm:py-6 content-evenly ">
-        <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] pb-6 ">
+      <div className="text-center flex flex-col justify-center items-center content-evenly space-y-10 max-w-xl ">
+        <h1 className="sm:font-extrabold sm:text-6xl text-[3rem]">
           Minesweeper
         </h1>
-        <div className="flex space-y-4 justify-center flex-col pb-16">
+        <div className="flex flex-row justify-center">
           <button
             onClick={() => handleNewGame(0)}
-            className={`primaryBtn w-40  `}
+            className={`secondaryBtn w-40`}
           >
             Easy
           </button>
           <button
             onClick={() => handleNewGame(1)}
-            className={`primaryBtn w-40 hidden sm:block`}
+            className={`secondaryBtn w-40 hidden sm:block`}
           >
             Intermediate
           </button>
           <button
             onClick={() => handleNewGame(2)}
-            className={`primaryBtn w-40 hidden sm:block`}
+            className={`secondaryBtn w-40 hidden sm:block`}
           >
             Expert
           </button>
+
           <p className="sm:hidden text-center mt-4">
             (Use a desktop browser to experience intermediate and expert
             difficulties.)
           </p>
+        </div>
+        <p className="text-md text-gray-600 leading-10">
+          React - useEffect - useState - Strong Typing with TypeScript - Custom
+          Hooks - Error Handling - Mouse Event Handling (onClick, onContextMenu)
+          - Game State Management - API Integration - JSON - fetch API -
+          Asynchronous Programming - Event Handling - Dynamic Rendering - JSX -
+          Tailwind CSS - Conditional Rendering - Modular Design
+        </p>
+        <div className="w-full flex justify-evenly">
+          <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/components/Minesweeper.tsx">
+            <button className="primaryBtn w-52">Source Code</button>
+          </a>
+          <a href="https://minesweeper-api.herokuapp.com/">
+            <button className="primaryBtn w-52">API</button>
+          </a>
         </div>
       </div>
       <div className="my-auto">

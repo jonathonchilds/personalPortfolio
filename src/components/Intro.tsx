@@ -12,7 +12,6 @@ const Intro = () => {
     typeSpeed: 80,
   });
 
-  
   return (
     <section className=" h-screen " id="introduction">
       <div className="flex flex-col justify-center items-center h-full z-10 ">
@@ -20,7 +19,7 @@ const Intro = () => {
           {text}
           <Cursor cursorStyle="_" />
         </p>
-        <div>
+        <div className="mb-16">
           <a href="#minesweeper">
             <button className="primaryBtn">Minesweeper</button>
           </a>
@@ -37,6 +36,12 @@ const Intro = () => {
             <button className="primaryBtn">Contact</button>
           </a>
         </div>
+        <span className="text-gray-500 text-center">
+          This portfolio & everything within was built from scratch. <br />
+          <br /> No tutorials. <br />
+          <br /> No styling guides. <br />
+          <br /> Just plenty of time & documentation.
+        </span>
       </div>
     </section>
   );

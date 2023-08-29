@@ -41,43 +41,63 @@ export default function Tictactoe() {
 
   const dynamicHeader = () => {
     if (game.winner == "X") {
-      return `The program wins!`;
+      return (
+        <div className="flex flex-col justify-center">
+          <p className="pb-2">Computer Victory!</p>
+          <div>
+            <button onClick={handleNewGame} className="primaryBtn w-28">
+              Reset
+            </button>
+          </div>
+        </div>
+      );
     } else if (game.winner == "TIE") {
-      return `It's a tie!`;
+      return (
+        <div className="flex flex-col justify-center">
+          <p className="pb-2">Tie!</p>
+          <div>
+            <button onClick={handleNewGame} className="primaryBtn w-28">
+              Reset
+            </button>
+          </div>
+        </div>
+      );
     } else return "";
   };
 
   return (
     <section
-      className="flex sm:flex-row flex-col justify-around h-screen pt-16"
+      className="h-screen flex sm:flex-row flex-col justify-around "
       id="tictactoe"
     >
-      <div className="text-center flex flex-col items-center space-y-6 justify-evenly ">
-        <div>
-          <div className="flex space-x-6 pb-12">
-            <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl pt-2 font-kaushan -rotate-12 text-sungold">
-              Unbeatable
-            </h2>
-            <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
-              Tic-Tac-Toe
-            </h1>
-          </div>
-          <button onClick={handleNewGame} className="primaryBtn">
-            {game.id == null ? "Start Game" : "Reset Game"}
-          </button>
+      <div className="flex flex-col justify-center text-center space-y-20 max-w-xl ">
+        <div className="flex space-x-4">
+          <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl pt-2 font-kaushan -rotate-12 text-sungold">
+            Unbeatable
+          </h2>
+          <h1 className="sm:font-extrabold sm:text-6xl text-[3rem] ">
+            Tic-Tac-Toe
+          </h1>
         </div>
-        {/* <div className="w-full flex justify-evenly mt-6 ">
-          <a href="https://github.com/jonathonchilds/React-Tac-Toe/blob/trunk/src/App.tsx">
+        <p className="text-md text-gray-600 leading-10">
+          React - API Integration - Async/Await - JavaScript - Functional
+          Components - Hooks - useState - useEffect - Fetch API - JSON - Dynamic
+          Rendering - Event Handling - CSS - Tailwind CSS - Responsive Design -
+          Flexbox - Grid Layout - JSX - Mapping - State Management
+        </p>
+
+        <div className="w-full flex justify-evenly">
+          <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/components/Tictactoe.tsx">
             <button className="primaryBtn w-52">Source Code</button>
           </a>
           <a href="https://tic-tac-toe-api.fly.dev/">
             <button className="primaryBtn w-52">API</button>
           </a>
-        </div> */}
+        </div>
       </div>
-      <div className=" flex justify-center items-center  ">
+      <div className=" flex justify-center items-center h-screen ">
         <div className="flex justify-center flex-col  h-[650px] w-[650px] ">
-          <h1 className="text-3xl font-bold text-center pb-6 h-12">
+          <h1 className="text-3xl font-bold text-center mb-6 h-20">
             {dynamicHeader()}
           </h1>
 
