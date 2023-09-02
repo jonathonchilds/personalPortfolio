@@ -132,7 +132,7 @@ export default function Minesweeper() {
 
   return (
     <section
-      className="h-screen flex sm:flex-row flex-col-reverse justify-around"
+      className="h-screen flex sm:flex-row justify-around"
       id="minesweeper"
     >
       <div className="text-center flex flex-col justify-center items-center content-evenly space-y-10 max-w-xl ">
