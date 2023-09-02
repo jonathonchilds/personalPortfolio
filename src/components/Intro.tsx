@@ -9,7 +9,7 @@ const Intro = () => {
 
   return (
     <section className="h-screen " id="introduction">
-      <div className="flex flex-col md:justify-center justify-around pt-20 items-center h-full  text-center">
+      <div className="flex flex-col md:justify-center justify-around pt-28 items-center h-full text-center">
         <p className="font-extrabold md:text-6xl text-3xl md:h-20 mb-4 md:block px-4">{text}</p>
         <div className="mb-16 md:block flex flex-col space-y-6">
           <a href="#minesweeper">

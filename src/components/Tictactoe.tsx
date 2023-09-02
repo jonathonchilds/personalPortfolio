@@ -67,7 +67,7 @@ export default function Tictactoe() {
 
   return (
     <section
-      className="h-screen flex sm:flex-row flex-col justify-around "
+      className="md:h-screen flex md:flex-row flex-col justify-around "
       id="tictactoe"
     >
       <div className="flex flex-col justify-center text-center space-y-20 max-w-xl ">
@@ -95,14 +95,14 @@ export default function Tictactoe() {
           </a>
         </div>
       </div>
-      <div className=" flex justify-center items-center h-screen ">
-        <div className="flex justify-center flex-col  h-[650px] w-[650px] ">
+      <div className=" flex justify-center items-center md:h-screen ">
+        <div className="flex justify-center flex-col  md:h-[650px] md:w-[650px]">
           <h1 className="text-3xl font-bold text-center mb-6 h-20">
             {dynamicHeader()}
           </h1>
 
           <div className="flex justify-center">
-            <ul className="grid grid-cols-3 grid-rows-3 gap-5 sm:h-[500px] sm:w-[500px] h-[300px]">
+            <ul className="grid grid-cols-3 grid-rows-3 md:gap-5 gap-2 md:h-[500px] md:w-[500px] h-[200px] w-[200px]">
               {game.board.map((boardRow, rowIndex) => {
                 return boardRow.map((cell, columnIndex) => {
                   return (

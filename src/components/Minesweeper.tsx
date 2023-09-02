@@ -132,7 +132,7 @@ export default function Minesweeper() {
 
   return (
     <section
-      className="h-screen flex sm:flex-row justify-around"
+      className="md:h-screen flex md:flex-row flex-col justify-around"
       id="minesweeper"
     >
       <div className="text-center flex flex-col justify-center items-center content-evenly space-y-10 max-w-xl ">
@@ -164,7 +164,7 @@ export default function Minesweeper() {
             difficulties.)
           </p>
         </div>
-        <p className="text-md text-gray-600 leading-10">
+        <p className="lg:text-md text-xs text-gray-600 leading-10">
           React - useEffect - useState - Strong Typing with TypeScript - Custom
           Hooks - Error Handling - Mouse Event Handling (onClick, onContextMenu)
           - Game State Management - API Integration - JSON - fetch API -
@@ -182,7 +182,7 @@ export default function Minesweeper() {
       </div>
       <div className="my-auto">
         <h2 className="text-center text-lg pb-4 h-12">{dynamicH2()}</h2>
-        <div className="w-[600px] flex justify-center">
+        <div className="md:w-[600px] flex justify-center">
           <ul
             className={`difficultyStyle  border-sungold/80 rounded position-relative border difficulty-${game.board.length}`}
           >
