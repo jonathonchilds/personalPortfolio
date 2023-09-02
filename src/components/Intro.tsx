@@ -18,6 +18,9 @@ const Intro = () => {
           <a href="#tictactoe">
             <button className="primaryBtn">Tic-tac-toe</button>
           </a>
+          <a href="#toolbox">
+            <button className="primaryBtn">ToolBox App</button>
+          </a>
           <a href="#todo">
             <button className="primaryBtn">Todo App</button>
           </a>

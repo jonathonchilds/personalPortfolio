@@ -1,11 +1,12 @@
+import Header from "./components/Header";
 import Contact from "./components/Contact";
 import Minesweeper from "./components/Minesweeper";
 import Tictactoe from "./components/Tictactoe";
 import Intro from "./components/Intro";
 import TodoFrame from "./components/TodoFrame";
 import ArtCalcFrame from "./components/ArtCalcFrame";
+import ToolboxFrame from "./components/ToolboxFrame";
 
-import Header from "./components/Header";
 import { ArrowSmallUpIcon } from "@heroicons/react/24/solid";
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
       </section>
       <section id="tictactoe" className="snap-start">
         <Tictactoe />
+      </section>
+      <section id="toolbox" className="snap-start">
+        <ToolboxFrame />
       </section>
       <section id="todo" className="snap-start">
         <TodoFrame />
