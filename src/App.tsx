@@ -11,7 +11,7 @@ import { ArrowSmallUpIcon } from "@heroicons/react/24/solid";
 
 function App() {
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden scrollbar ">
+    <main className="md:snap-y md:snap-mandatory h-screen overflow-y-scroll overflow-x-hidden scrollbar ">
       <Header />
       <section id="introduction" className="snap-start">
         <Intro />

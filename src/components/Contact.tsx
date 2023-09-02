@@ -15,29 +15,19 @@ export default function Contact() {
 
   return (
     <div className="h-screen relative flex items-center justify-center">
-      <div className="flex flex-col space-y-10 ">
-        <div className="space-y-10">
-          <div className="text-center">
-            <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/App.tsx">
-              <button className="primaryBtn">
-                Source Code For This Portfolio
-              </button>
-            </a>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <p className="text-2xl tracking-widest">(727) 967-3889</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <p className="text-2xl tracking-widest">
-              jonathon.k.childs@gmail.com
-            </p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <p className="text-2xl tracking-widest">
-              Tampa / Saint Petersburg, Florida
-            </p>
-          </div>
-        </div>
+      <div className="flex flex-col space-y-6 text-center">
+        <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/App.tsx">
+          <button className="primaryBtn">Source Code For This Portfolio</button>
+        </a>
+        <p className="text-2xl tracking-widest">(727) 967-3889</p>
+        <p className="text-2xl tracking-widest">jonathon.k.childs@gmail.com</p>
+        <p className="text-2xl tracking-widest">
+          Tampa / Saint Petersburg, Florida
+        </p>
+        <p className="text-sm text-gray-500">
+          (This form will auto-fill your system's default email provider
+          after you submit!)
+        </p>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 w-fit mx-auto"
