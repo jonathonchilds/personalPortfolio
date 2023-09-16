@@ -67,11 +67,11 @@ export default function Tictactoe() {
 
   return (
     <section
-      className="md:h-screen flex md:flex-row flex-col justify-around "
+      className="md:h-screen flex md:flex-row flex-col justify-around md:mx-0 mx-4 "
       id="tictactoe"
     >
-      <div className="flex flex-col justify-center text-center space-y-20 max-w-xl ">
-        <div className="flex space-x-4">
+      <div className="flex flex-col justify-center text-center md:space-y-20 space-y-14 max-w-xl ">
+        <div className="flex space-x-4 md:flex-row flex-col">
           <h2 className="sm:text-3xl sm:ml-10 font-bold mb-8 sm:mb-0 text-2xl pt-2 font-kaushan -rotate-12 text-sungold">
             Unbeatable
           </h2>
@@ -79,14 +79,14 @@ export default function Tictactoe() {
             Tic-Tac-Toe
           </h1>
         </div>
-        <p className="text-md text-gray-600 leading-10">
-          React - API Integration - Async/Await - JavaScript - Functional
-          Components - Hooks - useState - useEffect - Fetch API - JSON - Dynamic
-          Rendering - Event Handling - CSS - Tailwind CSS - Responsive Design -
-          Flexbox - Grid Layout - JSX - Mapping - State Management
+        <p className="lg:text-md text-xs text-gray-600 leading-10 md:mx-0 mx-4">
+          React - API Integration - Async/Await - JavaScript <span className="md:block hidden">-</span> Functional
+          Components - Hooks - useState <span className="md:block hidden">-</span> useEffect - Fetch API - JSON - Dynamic
+          Rendering - Event Handling - CSS - Tailwind CSS <span className="md:block hidden">-</span> Responsive Design -
+          Flexbox - Grid Layout - JSX <span className="md:block hidden">-</span> Mapping - State Management
         </p>
 
-        <div className="w-full flex justify-evenly">
+        <div className="w-full flex justify-evenly md:flex-row flex-col md:space-y-0 space-y-8">
           <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/components/Tictactoe.tsx">
             <button className="primaryBtn w-52">Source Code</button>
           </a>
@@ -102,7 +102,7 @@ export default function Tictactoe() {
           </h1>
 
           <div className="flex justify-center">
-            <ul className="grid grid-cols-3 grid-rows-3 md:gap-5 gap-2 md:h-[500px] md:w-[500px] h-[200px] w-[200px]">
+            <ul className="grid grid-cols-3 grid-rows-3 md:gap-5 gap-2 md:h-[500px] md:w-[500px] h-[300px] w-[300px]">
               {game.board.map((boardRow, rowIndex) => {
                 return boardRow.map((cell, columnIndex) => {
                   return (

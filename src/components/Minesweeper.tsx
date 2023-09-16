@@ -132,43 +132,43 @@ export default function Minesweeper() {
 
   return (
     <section
-      className="md:h-screen flex md:flex-row flex-col justify-around md:mb-0 mb-48"
+      className="md:h-screen flex md:flex-row flex-col justify-around md:mb-0 mb-44"
       id="minesweeper"
     >
-      <div className="text-center flex flex-col justify-center items-center content-evenly space-y-10 max-w-xl ">
+      <div className="text-center flex flex-col justify-center items-center content-evenly md:space-y-10 space-y-6 max-w-xl ">
         <h1 className="sm:font-extrabold sm:text-6xl text-[3rem]">
           Minesweeper
         </h1>
-        <div className="flex flex-row justify-center">
+        <div className=" flex-row justify-center hidden md:flex">
           <button
             onClick={() => handleNewGame(0)}
-            className={`secondaryBtn w-40 hidden md:block`}
+            className={`secondaryBtn w-40 `}
           >
             Easy
           </button>
           <button
             onClick={() => handleNewGame(1)}
-            className={`secondaryBtn w-40 hidden md:block`}
+            className={`secondaryBtn w-40 `}
           >
             Intermediate
           </button>
           <button
             onClick={() => handleNewGame(2)}
-            className={`secondaryBtn w-40 hidden md:block`}
+            className={`secondaryBtn w-40 `}
           >
             Expert
           </button>
-
-          <p className="md:hidden text-center text-sm mx-4">
-            (Use a desktop browser to experience intermediate and expert
-            difficulties!)
-          </p>
         </div>
+        <p className="md:hidden text-center text-sm mx-4 text-purple/60">
+          ( Use a desktop browser to experience intermediate and expert
+          difficulties! )
+        </p>
         <p className="lg:text-md text-xs text-gray-600 leading-10 md:mx-0 mx-4">
-          React - useEffect - useState - Strong Typing with TypeScript - Custom
-          Hooks - Error Handling - Mouse Event Handling (onClick, onContextMenu)
-          - Game State Management - API Integration - JSON - fetch API -
-          Asynchronous Programming - Event Handling - Dynamic Rendering - JSX -
+          React - Strong Typing with TypeScript - Custom Hooks <span className="md:block hidden">-</span> Error Handling -
+          Mouse Event Handling - Game State Management - API Integration - JSON
+          - Fetch API <span className="md:block hidden">-</span>
+          Asynchronous Programming - Event Handling{" "}
+          <span className="md:block hidden">-</span> Dynamic Rendering -
           Tailwind CSS - Conditional Rendering - Modular Design
         </p>
         <div className="w-full flex md:flex-row flex-col md:space-y-0 space-y-8 justify-evenly">
