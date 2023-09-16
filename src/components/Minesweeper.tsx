@@ -132,7 +132,7 @@ export default function Minesweeper() {
 
   return (
     <section
-      className="md:h-screen flex md:flex-row flex-col justify-around"
+      className="md:h-screen flex md:flex-row flex-col justify-around md:mb-0 mb-48"
       id="minesweeper"
     >
       <div className="text-center flex flex-col justify-center items-center content-evenly space-y-10 max-w-xl ">
@@ -142,36 +142,36 @@ export default function Minesweeper() {
         <div className="flex flex-row justify-center">
           <button
             onClick={() => handleNewGame(0)}
-            className={`secondaryBtn w-40`}
+            className={`secondaryBtn w-40 hidden md:block`}
           >
             Easy
           </button>
           <button
             onClick={() => handleNewGame(1)}
-            className={`secondaryBtn w-40 hidden sm:block`}
+            className={`secondaryBtn w-40 hidden md:block`}
           >
             Intermediate
           </button>
           <button
             onClick={() => handleNewGame(2)}
-            className={`secondaryBtn w-40 hidden sm:block`}
+            className={`secondaryBtn w-40 hidden md:block`}
           >
             Expert
           </button>
 
-          <p className="sm:hidden text-center mt-4">
+          <p className="md:hidden text-center text-sm mx-4">
             (Use a desktop browser to experience intermediate and expert
-            difficulties.)
+            difficulties!)
           </p>
         </div>
-        <p className="lg:text-md text-xs text-gray-600 leading-10">
+        <p className="lg:text-md text-xs text-gray-600 leading-10 md:mx-0 mx-4">
           React - useEffect - useState - Strong Typing with TypeScript - Custom
           Hooks - Error Handling - Mouse Event Handling (onClick, onContextMenu)
           - Game State Management - API Integration - JSON - fetch API -
           Asynchronous Programming - Event Handling - Dynamic Rendering - JSX -
           Tailwind CSS - Conditional Rendering - Modular Design
         </p>
-        <div className="w-full flex justify-evenly">
+        <div className="w-full flex md:flex-row flex-col md:space-y-0 space-y-8 justify-evenly">
           <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/components/Minesweeper.tsx">
             <button className="primaryBtn w-52">Source Code</button>
           </a>
