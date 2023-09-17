@@ -163,13 +163,13 @@ export default function Minesweeper() {
           ( Use a desktop browser to experience intermediate and expert
           difficulties! )
         </p>
-        <p className="lg:text-md text-xs text-gray-600 leading-10 md:mx-0 mx-4">
-          React - Strong Typing with TypeScript - Custom Hooks <span className="md:block hidden">-</span> Error Handling -
-          Mouse Event Handling - Game State Management - API Integration - JSON
-          - Fetch API <span className="md:block hidden">-</span>
-          Asynchronous Programming - Event Handling{" "}
-          <span className="md:block hidden">-</span> Dynamic Rendering -
-          Tailwind CSS - Conditional Rendering - Modular Design
+        <p className="lg:text-md text-xs text-gray-600 leading-10 md:mx-0 mx-4 max-w-[576px]">
+          React - Strong Typing with TypeScript - Custom Hooks
+          {window.innerWidth >= 1024 ? " - " : " "}Error Handling - Mouse Event
+          Handling{window.innerWidth < 500 ? " - " : " "}Game State Management - API Integration - JSON - Fetch API
+          {window.innerWidth >= 1024 ? " - " : " "}Asynchronous Programming
+          Event Handling{window.innerWidth >= 1024 ? " - " : " "}Dynamic
+          Rendering - Tailwind CSS - Conditional Rendering - Modular Design
         </p>
         <div className="w-full flex md:flex-row flex-col md:space-y-0 space-y-8 justify-evenly">
           <a href="https://github.com/jonathonchilds/personalPortfolio/blob/trunk/src/components/Minesweeper.tsx">

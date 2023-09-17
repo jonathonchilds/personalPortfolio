@@ -80,10 +80,12 @@ export default function Tictactoe() {
           </h1>
         </div>
         <p className="lg:text-md text-xs text-gray-600 leading-10 md:mx-0 mx-4">
-          React - API Integration - Async/Await - JavaScript <span className="md:block hidden">-</span> Functional
-          Components - Hooks - useState <span className="md:block hidden">-</span> useEffect - Fetch API - JSON - Dynamic
-          Rendering - Event Handling - CSS - Tailwind CSS <span className="md:block hidden">-</span> Responsive Design -
-          Flexbox - Grid Layout - JSX <span className="md:block hidden">-</span> Mapping - State Management
+          React - API Integration - Async/Await - JavaScript
+          {window.innerWidth >= 1024 ? " - " : " "}Functional Components - Hooks
+          - useState useEffect - Fetch
+          API - JSON - Dynamic Rendering - Event Handling - CSS - Tailwind CSS Responsive Design - Flexbox -
+          Grid Layout - JSX{window.innerWidth >= 1024 ? " - " : " "}Mapping -
+          State Management
         </p>
 
         <div className="w-full flex justify-evenly md:flex-row flex-col md:space-y-0 space-y-8">
